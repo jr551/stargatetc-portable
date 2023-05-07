@@ -1,0 +1,26 @@
+Auteur    : REX and Speed
+Game Type : Capture The Point (CTP)
+Max player: 32 players
+
+-------------------------------------------------------
+Perdue dans un labyrinthe à la recherche d'artefacts anciens, une equipe 
+Torri est prise à parti par des troupes goa'ulds...
+
+-------------------------------------------------------
+
+Briefing :
+
+Tau'ri: Capturez tous les points de contrôle et empêchez ces vers de terre d'en faire pareil !!
+
+Goa'uld: Faites un carnage...les prisonniers ne seront pas admis !! Capturez tous ces maudits points de contrôle et sortez vainqueurs de ce combats !!
+
+Note: 3 points de capture présents...
+
+-------------------------------------------------------
+
+Dates:            Compilation ultime le 21/04/05 + modifs le 09/09/05
+Durée:            2 semaines de travail + 1H pour la conversion CTP
+Textures:         Return To Castle Wolfenstein
+HD textures :     Sgt. Leon (merci à lui...)
+Sky:              xt_grhills sur www.mapping-area.com
+============================================================

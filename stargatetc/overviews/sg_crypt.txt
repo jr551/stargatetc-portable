@@ -1,0 +1,15 @@
+// overview description file for sg_crypt
+
+
+global 
+{
+	Zoom     1.44
+	ORIGIN	-1382.97 -1400.84 232.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_crypt.tga"
+	HEIGHT	-289.00
+}

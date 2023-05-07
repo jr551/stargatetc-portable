@@ -1,0 +1,25 @@
+C4 Pack
+==========================================================
+
+Type: Remote Pack Charge
+Action: Electrical Detonator via radio signal
+
+The plasticized form of RDX, composition C-4, contains 91%
+RDX, 2.1% polyisobutylene, 1.6% motor oil, and 5.3%
+2-ethylhexyl sebacate. The Demolition charge M183 is used
+primarily in breaching obstacles or demolition of large
+structures where large charges are required
+(Satchel Charge). The charge assembly M183 consists of 16
+block demolition charges M112, four priming assemblies and
+carrying case M85. Each Priming assembly consists of a
+five-foot length of detonating cord assembled with two
+detonating cord clips and capped at each end with a
+booster. The components of the assembly are issued in the
+carrying case. The demolition charge M112 is a rectangular
+block of Composition C-4 approximately 2 inches by 1.5
+inches and 11 inches long, weighing 1.25 Lbs. When the
+charge is detonated, the explosive is converted into
+compressed gas. The gas exerts pressure in the form of a
+shock wave, which demolishes the target by cutting,
+breaching, or cratering. 
+

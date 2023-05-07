@@ -1,0 +1,12 @@
+Goa'uld Larval Symbiot
+==========================================================
+
+Type: Goa'uld Symbiot not ready for implantation
+Action: Biological Sabotage
+
+The Larval Symbiot is a parasitic life form, which forces
+control of a host when mature. The Larval form however
+will be able to do so and will cause a subject to take
+damage internally until the larva dies. The Goa’uld have
+taken this to their advantage by supplying their troops
+with tubes full of larva.

@@ -1,0 +1,25 @@
+Author          	: Waldoo <waldoo@worldcraft3.fr.st>
+Textures 	: Biohazard ,Colonel C4 ,Zmaster
+Sky        	: "Bird of Prey" de FreakyZoid
+Game Type 	: Teamplay
+
+--------------------------------------------------------------------------------
+Thanks to their advanced technology, the Tok'ra have developed
+a virus that when released can kill all symbiots. Anubis has
+discovered this secret by torturing a Tok'ra and is enroute
+to the Tok'ra base. Now, with all SG-teams on the Tok'ra’s new
+secret base we can really kick some ass.
+
+Their task is to destroy the computer containing the secret
+formula and get out as quick as possible...
+...but the sound of Jaffa boots are already echoing through the
+tunnels!
+-------------------------------------------------------------------------------
+
+Briefing:
+
+Tau'ri:	 Find the computer, destroy it and get out!
+
+Goa'uld:  Prevent those rats from escaping...Kree Jaffa!!
+
+--------------------------------------------------------------------------------

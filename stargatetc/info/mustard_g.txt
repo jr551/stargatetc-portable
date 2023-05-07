@@ -1,0 +1,16 @@
+Mustard Gas Grenade 
+==========================================================
+
+Type: Flesh dissolving gas
+Action: Chemical release
+
+This United Nations banned chemical agent similar to 
+napalm was approved for off world use only because it is
+the only effective means to kill water borne Goa’uld. It
+is also used in combat for weakening an enemy before
+actual fighting begins. It is also capable of revealing
+invisible goa’uld by blocking the emitters of the cloaking
+device with oxidised compounds from it’s own coating.
+Prolonged expose to this gas will result in a painful
+death.
+

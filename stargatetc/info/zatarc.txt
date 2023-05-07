@@ -1,0 +1,11 @@
+Zatarc Weapon
+==========================================================
+
+Type: Goa'uld Assassin Weapon
+Action: Narrow path particle beam
+
+The zatarc Weapon was originally designed for use by
+Zatarcs (brain washed assassins) as a single strike sneak
+attack weapon. The weapon has been adapted as a sniper
+weapon for Jaffa on the battle field after The zatarcs
+proved ineffective against their enemies.

@@ -1,0 +1,32 @@
+
+
+Author      : Jamboneau <jamboneau@hotmail.com>
+Thanks to   : Waldoo, Zerogoki, Guiguithor, Seagal, Keyven and ApOpH!s
+Textures    : sg_gnu by Zerogoki- The official WAD of Poke646
+			
+----------------------------------------------------------------
+
+The goa'ulds attacked a little quiet planet which is protected by the
+Agard treaty.
+The ground of this planet is made with a big part of Naquadah. We think 
+these bad guys want to extract it to improve their weapons and ships.
+The Naquadah rate in this planet is so important that if the goa'ulds 
+succeed, they'll can attack Earth soon.
+
+----------------------------------------------------------------
+
+Tau'ri :
+The Thor's ship will take the team on Earth and will bring you directly 
+on the planet.
+He'll be not able to act because the war against the Replicators takes all
+his time.
+You'll beam to a teleportor discovered due to a goa'uld shot.
+
+Goa'uld :
+Kree jaffas !
+These weak Tau'ris are just arriving from aa Asgard ship.
+Find them.
+Kill them.
+Bring me their bodies.
+
+------------------------------------------------------------------

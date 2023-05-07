@@ -1,0 +1,7 @@
+3
+weapon			640 weapons/mustardgrenade	0	0	176	48
+weapon_s		640 weapons/mustardgrenade	0	0	176	48
+sgtcweapon		640 weapons/mustardgrenade	0	0	176	48
+
+
+

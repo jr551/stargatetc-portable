@@ -1,0 +1,67 @@
+Created by Brophis (brophis_sgtc@hotmail.com)
+Gameplay: Teamplay / Activate the Nuke
+Max Players: 32 max (16 each team)
+
+----------------------------------------------------------------
+
+A fun map demonstrating the latest version of the stargate.
+Features include new textures, resized DHD, improved 
+chevrons, new sound effects, new opening and closing effects.
+Now multiple players can enter the stargate at once and
+arrive at their destination at the same, allowing a team to
+outnumber enemies on the other side. Also you can now shoot
+through the stargate. Beware campers!
+Another new feature is new rings with new textures, several
+people can use the rings at once.
+The map itself is based on a egyptain temple.
+
+----------------------------------------------------------------
+
+Objectives:
+
+Tau'ri: 
+1) Use C4 to blow up the wall with the big painting in the
+   room to the right as you enter the temple through the gate.
+   Collect the keycard for the nuke and ring to the Goa'uld
+   ship and detonate the nuke. Make sure you ring off the ship
+   in time!
+
+** or **
+
+2)- Travel through the stargate and activate the two buttons 
+    in the temple
+  - Ring to the Goa'uld ship and activate the button there
+  - Then return through the stargate and activate the final 
+    button with the ank on it to win the round
+    (Note: Tau'ri buttons are at the blue checkpoints)
+
+Goa'uld:
+  - Ring down to the planet and activate the two buttons in the
+    temple
+  - Travel through the stargate and activate the button on the
+    other side
+  - Then return through the stargate and ring back to the ship
+    and activate the final button with the ank on it to win the
+    round
+    (Note: Goa'uld buttons are at the red checkpoints)
+
+----------------------------------------------------------------
+
+Note:
+- Multiple people can travel through the stargate at once
+- Multiple people can use the rings at once (BIG thanks to
+  DarkFighter for making them, they rock!)
+- The rings are one-way so beware
+- You can fire through the Stargate on this map!
+- You can now teleport grenades and tacs with the rings
+
+----------------------------------------------------------------
+
+Thanks to everyone who made textures, sounds, skytextures, etc.
+I can't remember who made them but if you want to be included
+here than email me and I'll add your name,
+
+Textures by SOCK
+
+Cheers,
+Brophis

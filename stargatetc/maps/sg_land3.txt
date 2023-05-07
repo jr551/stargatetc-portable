@@ -1,0 +1,24 @@
+SG_LAND3
+
+Author : **Colonel C4**
+Map    : Objectif 
+
+----------------------------------------------------------------------------
+Story:
+The goa'ulds learned the existence of an Asgard base on P3X259.
+During this time, on Earth, the Asgard in war against the Replicators, ask
+help to SG-1 to prevent the goa'uld from discovering the Asgard complex.
+Because of the planet haven't got stargate, the Asgards drop you in a plain.
+Find the outpost before the goa'ulds.
+
+-----------------------------------------------------------------------------
+
+Tau'ri :
+You have to go to the Asgard outpost and prevent the Goa'uld from capture
+the complex.
+
+Goa'ulds :
+Find the Tau'ris and destroy them. Don't let them stop your god !
+KREE JAFFA !
+
+----------------------------------------------------------------------------

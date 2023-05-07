@@ -1,0 +1,25 @@
+Tak'Uni'Taga'Mu'Teron
+==========================================================
+
+Type: Sentry Weapon
+Diameter: 210 mm
+Weight 1.3 kg
+
+The Tak/Tac is a personal defensive weapon, designed for
+Use against superior numbers. The Tak is a versatile tool
+with three modes can be extremely effective in many
+environments. It’s first mode (Basic Mode) it can fire
+highly focused laser beams similar to the zatarc weapon
+but with much more limited range. The second mode
+(Stun Mode) is a nerve-dampening beam designed to stun and
+weaken the enemy for an easy ambush. It’s third and most
+advanced setting is the Assassin mode, which fires a less
+powerful version of the basic mode but with the remaining
+power used to cloak itself. This mode is most effective in
+open areas where normally taks would be easily seen and
+removed. The mode is shown by the eye color. Red for
+basic, Yellow for stun and Green for assassin. It is
+recommended that more than one Tak be placed in the same
+area to affect as much damage as possible. The Tak also
+uses advanced AI and networked communication to attack
+in the most efficient method.

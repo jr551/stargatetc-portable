@@ -1,0 +1,19 @@
+// overview description file for sg_temple.bsp
+// by CmC The Custom Map Community http://cmc.w4y.at
+// and my-rip clan visit http://my-rip.azn-style.com
+// sponsor http://www.world4you.com
+// Ov createt by Codeman.at aka Andrew C (stargatetc name Bra'Tac)
+// Stargatetc Server : 80.243.163.157:27025 Cheyenne Mountain-Stargate Headquarter@w4y.at
+
+global 
+{
+	ZOOM	0.99
+	ORIGIN	736.00 -112 692
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_temple.tga"
+	HEIGHT	-729.00
+}

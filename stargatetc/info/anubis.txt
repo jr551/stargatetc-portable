@@ -1,0 +1,16 @@
+Anubis Guard:
+=============
+The guard of the God "Anubis"
+Anubis is the god of mummification and the 
+death on their path through the underworld
+Anubis is represented by a man with the 
+head of a jackal-like animal.
+
+Stats:
+=============
+
+Speed: Medium
+Weapons: Medium
+Armour: Heavy
+
+Special: Goa'uld Symbiote

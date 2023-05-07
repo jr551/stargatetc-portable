@@ -1,0 +1,14 @@
+// overview description file for sg_scorpus
+
+global 
+{
+	ZOOM	2.01
+	ORIGIN	384,00 -36.00 164.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_scorpus.tga"
+	HEIGHT	-1061.00
+}

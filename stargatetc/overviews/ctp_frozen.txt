@@ -1,0 +1,14 @@
+// overview description file for ctp_frozen
+
+global 
+{
+	ZOOM	1.36
+	ORIGIN	176.00 -1536.00 1056.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/ctp_frozen.tga"
+	HEIGHT	-1.00
+}

@@ -1,0 +1,35 @@
+Map by		: Khepri (remade by Brophis)
+Textures by	: Brophis, Khepri, Others
+Sky		: Unknown
+Gameplay	: Teamplay
+
+--------------------------------------------------------------------------------
+
+Lethal toxic gas is leaking from the malfunctioning environmental system in 
+the SGC. The stargate is the only means of escape as it would take too long to
+reach the surface before the envoronmental controls come back online. The
+planet dialed is that where SG-1 have just arrived for what was planned to be a 
+routine recon mission. However, the Goa'uld have managed to steal a computer
+card from the MALP before SG1s arrival which could allow them hack into the
+SGCs computer. It must be retrieved at all costs.
+
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri:
+Escape from the SGC through the gate, infiltrate the Goa'uld temple,
+retrieve the computer card stolen by the goa'uld, return to the SGC with it and
+place it back at the computer beside the star map.
+
+Goa'uld:
+Tau'ri have been detected near the Chapa'ai. Jaffa cree!
+
+--------------------------------------------------------------------------------
+
+Notes:
+-The iris can only be used in normal mode
+-The environmental controls malfunction only happens in normal mode
+-For the tau'ri that reaches the computer card there is a reward of 2 tacs and
+a staff weapons hidden behind the blue tiled panel (activate it like a button).
+i.e. You only die in Normal mode if you stay in the SGC

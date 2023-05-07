@@ -1,0 +1,5 @@
+4
+weapon			640 grenade	0	0	176	48
+weapon_s		640 grenade	0	0	176	48
+ammo			640 640hud7	48	96	24	24
+sgtcweapon		640 grenade	0	0	176	48

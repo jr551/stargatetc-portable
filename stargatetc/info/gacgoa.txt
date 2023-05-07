@@ -1,0 +1,12 @@
+Gac'Goa
+==========================================================
+
+Type: Goa'uld Shock Grenade
+Action: Ultra Bright Light Flare
+
+The Gac’Goa fires a large spread of laser quantity light
+which sends anyone in the immediate area without
+protection to be temporarily blind. Uses for this device
+include covering before charging and an escape-aiding
+tool. This device has enough power for a single flare
+after which it is permanently damaged.

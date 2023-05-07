@@ -1,0 +1,31 @@
+Author: hangehulke and waldoo
+Correction : REX and Brophis
+Game Type: Team Deathmatch
+6 - 24 players
+
+-------------------------------------------------------
+You find yourself in a pyramide after having magic beams
+Hit you in the head, goa'uld and tau'ri are making a battle.
+Choose your team then go to battle, or just sit back and
+eat popcorn!
+
+-------------------------------------------------------
+
+Briefing :
+
+Tau'ri: Get to the Sgc, you are the only ones who know the earths
+address
+
+Goa'uld: Kill all Tau'ri
+
+-------------------------------------------------------
+
+Credits, Textures:
+============================================================
+Date:             13th August 2001.
+File name:             tp-egyptian.zip
+Author:           Sock 
+Email:            sock@planetquake.com
+URL:              http://www.planetquake.com/simland
+Version:          1.5
+============================================================

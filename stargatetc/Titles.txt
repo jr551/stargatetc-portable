@@ -1,0 +1,917 @@
+//Stargate TC English Titles
+
+Spec_Mode1
+{
+Locked Chase Camera
+}
+
+Spec_Mode2
+{
+Free Chase Camera
+}
+
+Spec_Mode3
+{
+Free Camera
+}
+
+Spec_Mode4
+{
+Nobody Found
+}
+
+Spec_Mode5
+{
+Viewed Overview Mode
+}
+
+Spec_Mode6
+{
+No Overview
+}
+
+Spec_NoTarget
+{
+Cannot find any target
+}
+
+Spec_Help_Title
+{
+Spectator mode
+}
+
+Spec_Help_Text
+{
+Use the following keys to change the point of view:  
+
+Primary Attack - Next Player
+Secondary Attack - Previous Player
+Jump - Change Mode
+Use - Change Window Mode
+Duck - Options
+
+Use direction Keys to move around
+Use your mouse to change view angle
+}
+
+Spec_Slow_Motion
+{
+Slow Motion Mode
+}
+
+Spec_Replay
+{
+Replay
+}
+
+Spec_Auto
+{
+Auto
+}
+
+// Multiplayer Scoreboard
+Spec_Map
+{
+Map
+}
+
+Spectators
+{
+Spectators
+}
+
+Unassigned
+{
+Unassigned
+}
+
+TEAMS
+{
+Team
+}
+
+PLAYERS
+{
+Players
+}
+
+CLASS
+{
+Class
+}
+
+SCORE
+{
+Score
+}
+
+DEATHS
+{
+Deaths
+}
+
+LATENCY
+{
+Latenc.
+}
+
+VOICE
+{
+Voice
+}
+
+// other menu text
+Menu_OK
+{
+OK
+}
+
+Menu_Cancel
+{
+CANCEL
+}
+
+Mic_Volume
+{
+Volume micro
+}
+
+Speaker_Volume
+{
+Volume HP
+}
+
+Voice_Properties
+{
+Voice Properties
+}
+
+Map_Description_not_available
+{
+Map Description not available
+}
+
+Player
+{
+Player
+}
+
+Player_plural
+{
+Players
+}
+
+Muted
+{
+Muted
+}
+
+Unmuted
+{
+Active
+}
+
+No_longer_hear_that_player
+{
+you can no longer hear that player
+}
+
+OBS_NONE
+{
+Camera Options
+}
+
+OBS_CHASE_LOCKED
+{
+Chase Camera Locked
+}
+
+OBS_CHASE_FREE
+{
+Chase Camera Free
+}
+
+OBS_ROAMING
+{
+Free Roaming Camera
+}
+
+OBS_IN_EYE
+{
+First Person Camera
+}
+
+OBS_MAP_FREE
+{
+Map Free Camera
+}
+
+OBS_MAP_CHASE
+{
+Map Chase Camera
+}
+
+SPECT_OPTIONS
+{
+Options
+}
+
+CAM_OPTIONS
+{
+Camera Options
+}
+
+Spec_Duck
+{
+Duck to view spectator options
+}
+
+Oneill
+{
+Oneill
+}
+
+Carter
+{
+Carter
+}
+
+Jackson
+{
+Jackson
+}
+
+Tealc
+{
+Teal'c
+}
+
+Soldat
+{
+Soldier
+}
+
+Dieu
+{
+System Lord
+}
+
+Anubis
+{
+Anubis Guard
+}
+
+Jaffa
+{
+Jaffa
+}
+
+Prima
+{
+First Prime
+}
+
+Esclave
+{
+Horus Guard
+}
+
+Annuler
+{
+Close
+}
+
+Spectateur
+{
+Spectator
+}
+
+Torri
+{
+Tau'ri
+}
+
+Goauld
+{
+Goa'uld
+}
+
+Spec_help
+{
+Wait till next round to join game
+}
+
+Spec_help2
+{
+Jump to change mode
+}
+
+Torri_goal
+{
+Round Over, Tau'ri Win!
+}
+
+Goauld_goal
+{
+Round Over, Goa'uld Win!
+}
+
+Round_draw
+{
+Round Over, It's a Draw!
+}
+
+Team_win
+{
+Round Over, %s Win!
+}
+
+Host
+{
+Server
+}
+
+objectif_manquant
+{
+No mission objectives provided
+}
+
+Ok
+{
+Ok
+}
+
+DeadStatus
+{
+Status
+}
+
+Dead
+{
+Dead
+}
+
+Alive
+{
+Alive
+}
+
+time_left
+{
+Time Remaining
+}
+
+HEALTH
+{
+Health
+}
+
+RadioBouton00
+{
+Cover Me
+}
+
+RadioMessage00
+{
+Cover Me
+}
+
+RadioMessageGoauld00
+{
+Ja'ai (Cover Me)
+}
+
+RadioBouton01
+{
+Fall Back
+}
+
+RadioMessage01
+{
+Fall Back
+}
+
+RadioMessageGoauld01
+{
+Rin'tel'nok (Fall Back)
+}
+
+RadioBouton02
+{
+Go Go Go!
+}
+
+RadioMessage02
+{
+Go Go Go!
+}
+
+RadioMessageGoauld02
+{
+go'taï (Go Go Go!)
+}
+
+RadioBouton03
+{
+Hold Position
+}
+
+RadioMessage03
+{
+Hold Position
+}
+
+RadioMessageGoauld03
+{
+arey'kree (Hold Position)
+}
+
+RadioBouton04
+{
+Follow me
+}
+
+RadioMessage04
+{
+I'm on recon
+}
+
+RadioMessageGoauld04
+{
+In'trom Popra Cursor're (Follow me!)
+}
+
+RadioBouton05
+{
+Follow the target
+}
+
+RadioMessage05
+{
+Follow the target
+}
+
+RadioMessageGoauld05
+{
+Ke'ka (Leave to their research)
+}
+
+RadioBouton06
+{
+Spread out
+}
+
+RadioMessage06
+{
+Spread out
+}
+
+RadioMessageGoauld06
+{
+shemu (Let's Go)
+}
+
+RadioBouton07
+{
+Stop
+}
+
+RadioMessage07
+{
+Stop
+}
+
+RadioMessageGoauld07
+{
+Kon (Hold Fire)
+}
+
+RadioBouton08
+{
+Follow me
+}
+
+RadioMessage08
+{
+Follow me
+}
+
+RadioMessageGoauld08
+{
+tel'nok (Follow me)
+}
+
+RadioBouton10
+{
+Ready
+}
+
+RadioMessage10
+{
+I'm in Position
+}
+
+RadioMessageGoauld10
+{
+assak (Fall in ranks)
+}
+
+RadioBouton11
+{
+Grenade!
+}
+
+RadioMessage11
+{
+Grenade!
+}
+
+RadioMessageGoauld11
+{
+Grenade!
+}
+
+RadioBouton12
+{
+Yes
+}
+
+RadioMessage12
+{
+Yes Sir!
+}
+
+RadioMessageGoauld12
+{
+Klo'Mel (Get ready to fire)
+}
+
+RadioBouton13
+{
+Enemy!
+}
+
+RadioMessage13
+{
+Watch out Enemy!
+}
+
+RadioMessageGoauld13
+{
+Kel toc no (I have the captive)
+}
+
+RadioBouton14
+{
+Enemies!
+}
+
+RadioMessage14
+{
+Watch Out Enemies!
+}
+
+RadioMessageGoauld14
+{
+Jaffa Kree (jaffa, attention)
+}
+
+RadioBouton15
+{
+There coming!
+}
+
+RadioMessage15
+{
+Enemy is taking ground
+}
+
+RadioMessageGoauld15
+{
+tel nok kree (There coming!)
+}
+
+RadioBouton16
+{
+Backup!
+}
+
+RadioMessage16
+{
+Help, I need backup!
+}
+
+RadioMessageGoauld16
+{
+Kree'No'Tel (We have a problem!) 
+}
+
+RadioBouton20
+{
+Need Ammo
+}
+
+RadioMessage20
+{
+I need Ammo!
+}
+
+RadioMessageGoauld20
+{
+Ger'Kat (Ammo!)
+}
+
+RadioBouton21
+{
+Report
+}
+
+RadioMessage21
+{
+Reporting
+}
+
+RadioMessageGoauld21
+{
+ula kree (Reporting)
+}
+
+RadioBouton22
+{
+Affirmative
+}
+
+RadioMessage22
+{
+Affirmative
+}
+
+RadioMessageGoauld22
+{
+Swaie (Affirmative)
+}
+
+RadioBouton23
+{
+Negitive
+}
+
+RadioMessage23
+{
+Negitive
+}
+
+RadioMessageGoauld23
+{
+fol (Negitive)
+}
+
+RadioBouton27
+{
+Die!!
+}
+
+RadioMessage27
+{
+Die!!
+}
+
+RadioMessageGoauld27
+{
+Kin'Shak (Your hour has come)
+}
+
+RadioBouton28
+{
+Expand
+}
+
+RadioMessage28
+{
+Expand
+}
+
+RadioMessageGoauld28
+{
+Key (insult)
+}
+
+friendly_attack
+{
+You killed your team mate!
+}
+
+overflow_tacs
+{
+Too many Tacs in this area
+}
+
+disconnected
+{
+Disconnected
+}
+
+team_balance
+{
+Cannot join that team, Teams must be balanced
+}
+
+AutoAssign
+{
+Auto Team
+}
+
+
+
+
+
+//WEAPONS NAMES TITLES!!!!
+WEAPON_COUJAF
+{
+Coujaf
+}
+
+WEAPON_KNIFE
+{
+Combat Knife
+}
+
+WEAPON_BATSUP
+{
+Torture Stick
+}
+
+WEAPON_BER
+{
+Beretta 92
+}
+
+WEAPON_PSG1
+{
+HK PSG1
+}
+
+WEAPON_MP5
+{
+MP5
+}
+
+WEAPON_P90
+{
+FN P90
+}
+
+WEAPON_SHOTGUN
+{
+SPAS-12
+}
+
+WEAPON_M16
+{
+M16A2
+}
+
+WEAPON_MAIN
+{
+Hand Device
+}
+
+WEAPON_ZAT
+{
+Zat'ni'katel
+}
+
+WEAPON_LANCE
+{
+Staff Weapon
+}
+
+WEAPON_TER
+{
+T.E.R.
+}
+
+WEAPON_ZATARC
+{
+Zatarc Weapon
+}
+
+WEAPON_TACGUN
+{
+Tak'Uni'Taga'Mu'Teron
+}
+
+WEAPON_HANDGRENADE
+{
+Hand Grenade
+}
+
+WEAPON_MINE
+{
+D-32 Land Mine
+}
+
+WEAPON_INVIS
+{
+Personal Cloak Device
+}
+
+WEAPON_SHIELD
+{
+Personal Shield
+}
+
+WEAPON_C4
+{
+C4 Pack
+}
+
+WEAPON_LARVE
+{
+Larval Goa'uld
+}
+
+WEAPON_MEDIC
+{
+Epinephrine Pen
+}
+
+WEAPON_SMOKEGRENADE
+{
+Smoke Grenade
+}
+
+WEAPON_NERVEGRENADE
+{
+Nerve Agent Grenade
+}
+
+WEAPON_NARCOGRENADE
+{
+Narcotic Grenade
+}
+
+WEAPON_MUSTARDGRENADE
+{
+Mustard Gas Grenade
+}
+
+WEAPON_MEDICGOA
+{
+Healing Device
+}
+
+WEAPON_USAS12
+{
+USAS 12
+}
+
+WEAPON_GLSTAFF
+{
+Glider Staff
+}
+
+WEAPON_GACGOA
+{
+Gac'Goa
+}
+
+Reset
+{
+Reset
+}
+
+Apply
+{
+Apply
+}
+
+Implanted
+{
+Implanted Tau'ri
+}
+
+Ghost
+{
+Ghost Skull
+}
+
+Naqbomb
+{
+Naquada Bomb
+}
+
+Total
+{
+Total:
+}
+
+Used
+{
+Used:
+}
+
+Free
+{
+Free:
+}

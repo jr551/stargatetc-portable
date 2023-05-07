@@ -1,0 +1,288 @@
+// Command Menu V1.5 Final : Atlantin
+// Scripting : Atlantin
+// Team Messages : Instinct
+//--------------------------------------------------------
+
+
+" " "Help"
+{
+	CUSTOM		" " "Map Description"      "!MAPBRIEFING"
+	" " "Time Left" "timeleft"
+
+}
+
+
+" " "Change Team"	"showmenu"
+
+" " "Change Weapons"	"showequip"
+
+// Here are the rest of the buttons and submenus
+// You can change these safely if you want and add your own but leave CREDITS!!.
+
+" " "Team Message"
+{
+	// Map Specific
+
+	MAP sg_chateau " " "Map Specific (sg_chateau)"
+	{	
+		" " "Get the key!" 		"say_team Get The Key!"
+		" " "Activate The Bomb" 	"say_team Activate The Bomb"
+		" " "Escape To The Sewers" 	"say_team Escape To The Sewers"
+		" " "Guard The Rings" 		"say_team Guard The Rings"
+		" " "Get In Position" 	"say_team Get in Position"
+		" " "Storm The Front" 	"say_team Storm The Front"
+		" " "Go Onto The Roof" 	"say_team Go Onto The Roof"
+	}
+
+	MAP sg_land3 " " "Map Specific (sg_land3)"
+	{
+		" " "Get Into Position" 	"say_team Get Into Position"
+		" " "Activate The Door" 	"say_team Activate The Door"
+		" " "Go To The Asgard Base" 	"say_team Go To The Asgard Base"
+	}	
+
+	MAP sg_loop " " "Map Specific (sg_loop)"
+       {
+
+		" " "Head to Stargate!" 	"say_team Head to Stargate!"
+		" " "Storm The Front" 		"say_team Storm The Front"
+		" " "Remember Our Objective!" 	"say_team Remember Our Objective!"
+		" " "Secure The Stargate!"  	"say_team Secure The Stargate"
+		" " "Go Through The Stargate" 	"say_team Go Through The Stargate"
+
+	}
+
+	MAP sg_temple " " "Map Specific (sg_temple)"
+	{
+		" " "Get Into Position" 	"say_team Get Into Position"
+		" " "Secure The Gate" 		"say_team Secure The Gate"
+		" " "Dial The Gate" 		"say_team Dial The Gate"
+		" " "Here They Come" 		"say_team Here They Come"
+		" " "Prepare For Combat" 	"say_team Prepare For Combat"
+	}
+
+	MAP sg_stargate " " "Map Specific (sg_stargate)"
+	{
+		" " "Prepare For Combat" 	"say_team Prepare For Combat"
+		" " "Enemy Is Holding The Stargate" "say_team Enemy Is Holding The Stargate"
+		" " "Storm The Gateroom"   	"say_team Storm The Gateroom"
+		" " "Stargate Secured"  	"say_team The Stargate Is secured!"
+	}
+        MAP sg_middleage " " "Map Specific (sg_middleage)"
+          {
+		" " "Sniper in tower" 		"Sniper in tower!"
+		" " "Dial The Gate" 		"say_team Dial Gate The Gate"
+		" " "Secure the Stargate" 	"say_team Secure The Stargate"
+	}
+
+	MAP sg_newstrike " " "Map Specific (sg_newstrike)"
+	{
+	
+		" " "Get The Key" 		"say_team Get The Key"
+		" " "Activate The Bomb" 	"say_team Activate The Bomb"
+		" " "Check The Towers" 		"say_team Check The Towers"
+	}
+
+	MAP sg_nox " " "Map Specific (sg_nox)"
+	{
+		" " "Get Into Position" 	"say_team Get Into Position"
+		" " "Dial Gate" 		"say_team Dial It Up"
+		" " "Enemy Have Secured The Gate" "say_team Enemy Have Secured The Gate"
+	}
+
+	MAP sg_prom " " "Map Specific (sg_prom)"
+	{
+		" " "Incoming" 			"say_team Incoming"
+		" " "Hold Position" 		"say_team Hold Your Position"
+		" " "Guard The Garden" 		"say_team Guard The Garden"
+	}
+
+	MAP sg_pyramide " " "Map Specific (sg_pyramide)"
+	{
+		" " "Dial The Gate"		"say_team Dial It Up!"
+		" " "Enemy Has Gate"		"say_team The Enemy Has Control Of The Gate"
+		" " "Storm The Front"		"say_team Storm The Front"
+	}
+
+	MAP sg_shunky " " "Map Specific (sg_shunky)"
+	{
+		" " "Get Into Position" 	"say_team Get Into Position"
+		" " "Someone go Spawn" 		"say_team Someone go into Enemy's Spawn point"
+		" " "Someone take roof" 	"say_team Someone take roof!!"
+	}
+
+	MAP sg_strike3 " " "Map Specific (sg_strike3)"
+	{
+		" " "They are behind that door" "say_team They are behind that door"
+		" " "Activate The C4" 		"say_team Activate The C4!"
+		" " "Prepare For Combat" 	"say_team Prepare For Combat!"
+		" " "Remember Our Objective" 	"say_team Remember Our Objective"
+	}
+
+	MAP sg_tollana " " "Map Specific (sg_tollana)"
+	{
+		" " "Storm The Front" 		"say_team Storm The Front"
+		" " "Check This Area" 		"say_team Check This Area"
+		" " "Move With Caution" 	"say_team Move With Caution"
+	}
+
+	MAP sg_Tokra2 " " "Map Specific (sg_Tokra2)"
+	{
+		" " "'Get Into Position'" 	"say_team Get Into Position"
+		" " "'Guard The Rings'" 	"say_team Guard The Rings"
+		" " "Activate Rings" 		"say_team Activate The Rings And Proceed"
+	}
+
+
+	MAP sg_thor " " "Map Specific (sg_thor)"
+	{
+		" " "Watch your back" 		"say_team Watch your back"
+		" " "Hold Your Position" 	"say_team Hold Your Position"
+		" " "Enemy Spotted at roof" 	"say_team Enemy spotted at roof"
+
+	}
+       
+
+     " " "Acknowledged"			"say_team Acknowledged"
+     " " "Negative"			"say_team Negative"
+     " " "Go Go Go!"			"say_team Go Go Go!"
+     " " "Stick Together"		"say_team Stick Together"
+     " " "Follow Me"			"say_team Follow Me"
+     " " "On my way"			"say_team On my way"
+     " " "Need backup"			"say_team Need backup!"
+     " " "Cover Me"			"say_team Cover Me!"
+     " " "Enemy Spotted"		"say_team Enemy Spotted!
+     " " "Medic!!"			"say_team I Need A Medic!"
+	}
+	
+
+" " "Server Admin"
+{
+
+     " " "Friendlyfire"
+    {
+      " " "On" "mp_friendlyfire 1"
+     " " "Off" "mp_friendlyfire 0"
+      }
+      " " "GameModes"
+    {
+    " " "Normal" "mp_gamemode 0"
+    " " "Ticket Mode" "mp_gamemode 1"
+    " " "Conflict Mode" "mp_gamemode 2"
+    " " "Rambo Mode" "mp_gamemode 3"
+    " " "Captain Mode" "mp_gamemode 4"
+     }
+       " " "Changelevel"
+
+{
+
+  " " "Chateau" "changelevel sg_chateau"
+  " " "Land3" "changelevel sg_land3"
+  " " "Loop" "changelevel sg_loop"
+  " " "Middleage" "changelevel sg_middleage"
+  " " "Newstrike" "changelevel sg_newstrike"
+  " " "Nox" "changelevel sg_nox"
+  " " "Prom" "changelevel sg_prom"
+  " " "Stargate" "changelevel sg_stargate"
+  " " "Strike3" "changelevel sg_strike3"
+  " " "Target" "changelevel sg_target"
+  " " "Temple" "changelevel sg_temple"
+  " " "Tokra2" "changelevel sg_tokra2"
+  " " "Tollana" "changelevel sg_tollana"
+  " " "Thor" "changelevel sg_thor"
+ " " "Pyramide" "changelevel sg_pyramide"
+
+}
+
+ " " "Internet / Local"
+{
+  " " "Internet" "sv_lan 0"
+  " " "Lan" "sv_lan 1"
+}
+      " " "Resetround"
+     {
+        " " "Normal" "mp_resetround 1"
+        " " "Clears scores" "mp_resetround 2"
+        }
+      " " "Set Tickets" "messagemode mp_tickets"
+      " " "Kick" "messagemode Kick"
+" " "Set Tac Distance" "messagemode mp_tacdistance"
+" " "Status" "status"
+ }
+
+
+
+
+" " "Rcon"
+
+   {
+
+     " " "Friendlyfire"
+    {
+      " " "On" "rcon mp_friendlyfire 1"
+     " " "Off" "rcon mp_friendlyfire 0"
+      }
+      " " "GameModes"
+    {
+    " " "Normal" "rcon mp_gamemode 0"
+    " " "Ticketmode" "rcon mp_gamemode 1"
+    " " "Conflict Mode" "rcon mp_gamemode 2"
+     }
+       " " "Changelevel"
+
+{
+
+  " " "Chateau" "rcon changelevel sg_chateau"
+  " " "Land3" "rcon changelevel sg_land3"
+  " " "Loop" "rcon changelevel sg_loop"
+  " " "Middleage" "rcon changelevel sg_middleage"
+  " " "Newstrike" "rcon changelevel sg_newstrike"
+  " " "Nox" "rcon changelevel sg_nox"
+  " " "Prom" "rcon changelevel sg_prom"
+  " " "Stargate" "rcon changelevel sg_stargate"
+  " " "Strike3" "rcon changelevel sg_strike3"
+  " " "Target" "rcon changelevel sg_target"
+  " " "Temple" "rcon changelevel sg_temple"
+  " " "Tokra2" "rcon changelevel sg_tokra2"
+  " " "Tollana" "rcon changelevel sg_tollana"
+  " " "Thor" "rcon changelevel sg_thor"
+ " " "Pyramide" "rcon changelevel sg_pyramide"
+
+}
+
+      " " "Resetround"
+     {
+        " " "Normal" "rcon mp_resetround 1"
+        " " "Clears scores" "rcon mp_resetround 2"
+        }
+" " "Set Tickets" "messagemode rcon mp_tickets"
+      " " "Rcon Kick" "messagemode rcon kick"
+" " "Enter rcon Password" "messagemode rcon_password"
+" " "Set Tac Distance" "messagemode rcon mp_tacdistance"
+ }
+
+" " "Personal Settings" 
+
+    {
+ 
+    " " "Show Fps?"
+   {
+
+  " " "Yes" "cl_showfps 1"
+  " " "No" "cl_showfps 0"
+}
+     
+   " " "Show NetGraph?"
+ {
+
+   " " "Yes" "net_graph 3"
+  " " "No" "net_graph 0"
+}
+
+" " "Changename" "messagemode Name"
+
+}
+
+" " "Exit Game" "exit"
+
+}

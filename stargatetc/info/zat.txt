@@ -1,0 +1,15 @@
+Zat'ni'katel
+==========================================================
+
+Type: Goa'uld Sidearm
+Action: Electro concussive wave
+
+A handheld Goa'uld weapon, formed in the shape of a coiled
+serpent. The zat'ni'katel was nicknamed "zat gun" by
+Colonel O'Neill. The zat uses a different form of energy,
+less powerful than that of a staff weapon. One shot will
+usually render a victim unconscious. Two shots will kill
+most subjects. Three shots disintegrate them. This weapon
+uses electrical charges to disturb matter. eventually
+repeated exposure to this kind of energy results in rapid
+molecular breakdowns for any kind of material.

@@ -1,0 +1,14 @@
+Healing Device
+==========================================================
+
+Type: Bio Regenerator
+Action: Cell & Structure replication
+
+It is the field version of the Goa’uld healing device
+usable by Jaffa. Created by the goa’uld after releasing
+they needed medical aid to maintain their ranks, the
+healing device is the most powerful healing tool on the
+battlefield. The regeneration technology is similar to
+that of the sarcophagus but with much less power. The
+device can heal most fatal wounds short of poisoning and
+complete annihilation.

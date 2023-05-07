@@ -1,0 +1,1 @@
+tir secondaire de la main

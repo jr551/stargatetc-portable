@@ -1,0 +1,26 @@
+CTP_FROZEN
+
+Author		: ** Colonel C4 **
+Textures	: ** Colonel C **, Lemog, sock
+Time		: Arctic night
+Gamemode	: Cature the point
+
+------------------------------------------------------------------------------
+
+An old goa'uld base on P3X684, was evacuated after a climatic change modified
+the temperature from 23°F during the day and -58°F during the night.
+But weapons and very important documents are on the planet.
+
+-------------------------------------------------------------------------------
+
+Tau'ri :
+The base contains symbiots in state of damning up.
+Yout have 11 local hours (8 earth hours) to study these synbiots, after that time,
+the cold will kill you. You should control the three strategic points of the map.
+
+Goa'uld :
+Prevent the Tau'ris from capturing the strategic points. Take positions and capture
+these points !
+
+----------------------------------------------------------------------------------
+

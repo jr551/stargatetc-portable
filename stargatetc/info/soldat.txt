@@ -1,0 +1,14 @@
+Soldier:
+========
+The Soldier is able to use all weapons
+which he gets in his hands. He is especially
+trained for extreme combat situations.
+
+Stats:
+=============
+
+Speed: Medium
+Weapons: Medium
+Armour: Medium
+
+Special: None

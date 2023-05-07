@@ -1,0 +1,47 @@
+Author   : Bad Lieutenant <gatewars@gmail.com> 
+Textures : All textures from Day Of Deafeat
+Game type: Teamplay 
+PLayers  : 4 - 20 players 
+
+
+
+
+------------------------------------------------------------------------ 
+STORY:
+------------------------------------------------------------------------ 
+
+
+P2X826, known as Tekluhanak. SG-1 is on a rescue mission on a planet
+recently attacked by Lord Ba'al. A SG-team wich was on an archaelogical
+reco has been captured by the System Lord for further interrogation.
+Briefed by General Hammond and Major Davis, President Hayes has authorised
+a higly dangerous rescue mission.
+
+You were sent to deliver your mates, but thanks to some Tok'ra spies,
+they managed to escape the Goa'ulds earlier before you arrived.
+Their presence was not detected, but now, Ba'al knows SG-1 is on the
+ground, and he send his troops to capture the team.
+
+You have to escape quickly the planet. The Tok'ra spies are waiting
+in the forest near a Hatak class ship; they will perhaps help you.
+
+
+------------------------------------------------------------------------ 
+Briefing:
+------------------------------------------------------------------------ 
+
+Tau'ri: Escape Tekluhanak. If the Stargate is too heavily protected,
+find the Tok'ra spies to escape with them in their ship.
+
+Goa'uld: Ba'al was extremely displeased when he learned the Tau'ri
+escaped. This time, you have to kill all Tau'ris. Don't fail your god.
+
+
+
+------------------------------------------------------------------------ 
+Notes:
+------------------------------------------------------------------------ 
+
+The Stargate is perhaps not the only way to return to the SGC...
+
+------------------------------------------------------------------------

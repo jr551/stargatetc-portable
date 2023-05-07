@@ -1,0 +1,13 @@
+Horus Guard:
+===============
+Guard of horus god. 
+You can distinguish him by the bird like helmet.
+
+Stats:
+=============
+
+Speed: Fast
+Weapons: Light
+Armour: Medium
+
+Special: Goa'uld Symbiote, Stealth

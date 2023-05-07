@@ -1,0 +1,12 @@
+Epinephrine Pen
+==========================================================
+
+Type: Medical First Aid Tool
+Action: Hyper dermic needle
+
+A dose of Adrenalin mixed with modified Trutonin will
+immediately heal a patient without developing any chemical
+dependencies on the drug. This is primarily used as a
+stopgap measure where medics are unavailable to sg teams.
+The Adrenalin will also boost a patients stamina to full
+giving the combatant the ability to defend him/her self.

@@ -1,0 +1,28 @@
+Auteurs   : F-Boisier et REX
+Game Type : Capture The Point (CTP)
+Max player: 32 players
+
+-------------------------------------------------------
+
+Contexte :
+
+Le temple en construction d'un dieu inconnu, Amon, a ete retrouvé abandonné de ses ouvriers. Mais pas de ses gardes, dans l'impossiblilité de s'enfuir à cause du vol de la porte des étoiles de cette planète par Amon. La taurri etant tres envieuse d'utiliser ce temple comme base, elle aura fort à faire avec les troupes goa'ulds qui seront ravies d'avoir enfin un peu d'action. Aucun prisonnier n'est à attendre, quel que soit le camp choisi.
+
+-------------------------------------------------------
+
+Briefing :
+
+Tau'ri: Capturez tous les points de contrôle et empêchez ces vers de terre d'en faire de même !!
+
+Goa'uld: Faites un carnage...les prisonniers ne seront pas admis !! Capturez tous ces maudits points de contrôle et sortez vainqueurs de ce combat !!
+
+Note: 4 points de capture présents...
+
+-------------------------------------------------------
+
+Dates:            Compilation ultime le 21/12/2005
+Durée:            2 mois de travail
+Textures:         UT2004 + SW Jedi Academy
+                  et quelques textures perso...
+Sky:              london (StargateTC)
+============================================================

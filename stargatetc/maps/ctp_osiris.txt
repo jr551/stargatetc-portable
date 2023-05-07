@@ -1,0 +1,29 @@
+Auteur    : REX
+Game Type : Capture The Point (CTP)
+Max player: 16 players
+
+-------------------------------------------------------
+
+Contexte :
+
+L'ancien temple principal d' Osiris est attaqué par des troupes torris. Ce temple a été abandonné il y a peu, et n'etait pas tout à fait terminé...
+Il est interressant de savoir qu'il a ete construit sur les fondations d'un ancien temple de Râ, et donc qu'il doit en rester des parties visitables. 
+
+-------------------------------------------------------
+
+Briefing :
+
+Tau'ri: Capturez tous les points de contrôle et empêchez ces vers de terre d'en faire de même !!
+
+Goa'uld: Faites un carnage...les prisonniers ne seront pas admis !! Capturez tous ces maudits points de contrôle et sortez vainqueurs de ce combat !!
+
+Note: 5 points de capture présents...
+
+-------------------------------------------------------
+
+Dates:            Compilation ultime le 05/04/06
+Durée:            3 semaines de travail
+Textures:         sg_temple + sg_pyramide (SOCK)
+                  et quelques textures perso...
+Sky:              xt_grhills (StargateTC)
+============================================================

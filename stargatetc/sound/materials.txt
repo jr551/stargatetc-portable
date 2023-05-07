@@ -1,0 +1,118 @@
+//-----------------------------------------------------------
+//            Stargate-TC
+//-----------------------------------------------------------
+// In this file you can modify the sound the textures give
+// when the player walks on them
+//
+// Location: X:\halflife\stargatetc\sound\materials.txt
+//
+// NOTE: only the first 12 characters of the texture name are used
+// NOTE: a maximum of 512 textures may be tagged in this file
+//
+//  	'M' metal // metal
+//	'V' ventillation //ventilation (metal qui se tord)
+//	'D' dirt // terre
+//	'S' slosh liquid // liquide
+//	'T' tile // tuile, carrelage
+//	'G' grate (Concrete is the default) // grille
+//	'W' wood // bois
+//	'P' computer // ordinateur
+//	'Y' glass // vitre
+
+M 006metal
+M 011metal
+M 024metal
+M 041metal
+M 042metal
+M 056metal
+D floor11
+M metal01
+M metal02
+
+// sg_chateau
+T 011marbre
+D cxbrckc
+W cxbarrela
+w Barrel01_256x12
+W Barrel02_256x25
+W cxcnstrctwooda
+W cxcnstrctwoodb
+W cxdrc
+w cxdecwdc
+W cxstairsd
+W cxstairse
+W cxwoodb
+W cxwoodd
+W cxwoodf
+W cxwoodh
+W cxwoodi
+W cxwoodj
+W cxwoodk
+W cxwoodl
+W cxwoodm
+W wd_sr_m11
+T cxmarblee
+T cxmarblec
+T cxroofa
+
+// sg_strike, sg_strike2, sg_strike3 & sg_newstrike
+M st-supjafmur1
+M st-supjafmur2
+M st-supjafmur3
+M ST-MURJAFFA8
+M st-nac2
+M {st-grillejafa
+M {st-grillejafa2
+M st-murjafa3
+M st-murjafa3a
+G ST-MURJAFFA7
+M st-nacuhada2
+
+// sg_target, sg_land3, sg_nox
+D herbe_1
+D herbe_10
+D herbe_2
+D herbe_9
+D herbe_fleurs1
+D nature069
+D nature073
+D st-terre003
+D st-terre010
+D st-terre012
+D st-roche006
+D st-roche013
+D nox07
+W nox06
+W ecorce3
+
+// nemesis.wad
+M 005metal
+M mur00
+M mur01
+M mur02
+G st-nemesis4
+T st-nemesis7
+
+// sg_loop
+W caisse
+D terre2
+D terre256
+D terreecrit
+D terretrou
+
+// terre.wad
+D st-terre001
+D st-terre002
+D st-terre004
+D st-terre005
+D st-terre006
+D st-terre007
+D st-terre008
+D st-terre009
+D st-terre011
+
+// unasmarteau.wad
+D herbe2
+D herbe3
+D herbe4
+D herbe5

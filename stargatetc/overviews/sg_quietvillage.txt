@@ -1,0 +1,14 @@
+// overview description file for sg_quietvillage
+
+global 
+{
+	ZOOM	1.32
+	ORIGIN	860.00 640.00 160.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_quietvillage.tga"
+	HEIGHT	-385.00
+}

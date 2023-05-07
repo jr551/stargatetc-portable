@@ -1,0 +1,14 @@
+Major Samantha Carter:
+========================
+Sam is a USAF officer. She's excellent in
+the handling of weapons and has a vast 
+knowledge of technology.
+
+Stats:
+=============
+
+Speed: Medium
+Weapons: Medium
+Armour: Medium
+
+Special: Protein Marker

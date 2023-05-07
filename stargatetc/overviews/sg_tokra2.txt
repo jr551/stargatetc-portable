@@ -1,0 +1,19 @@
+// overview description file for sg_tokra2.bsp
+// by CmC The Custom Map Community http://cmc.w4y.at
+// and my-rip clan visit http://my-rip.azn-style.com
+// sponsor http://www.world4you.com
+// Ov createt by Codeman.at aka Andrew C (stargatetc name Bra'Tac)
+// Stargatetc Server : 80.243.163.157:27025 Cheyenne Mountain-Stargate Headquarter@w4y.at
+
+global 
+{
+	ZOOM	0.83
+	ORIGIN	92.00 -170.13 310.50
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_tokra2.tga"
+	HEIGHT	-1524.00
+}

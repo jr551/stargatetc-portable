@@ -1,0 +1,29 @@
+M16A2
+==========================================================
+
+Caliber: 5.56x45mm NATO / M855
+Action:	gas operated, rotating bolt
+Overall length:	1006 mm
+Barrel length: 508 mm
+Weight: empty / loaded 3.77 kg / 4.47 kg
+Magazine capacity: 20 or 30 rounds standard
+Rate of fire, cyclic: 800 rounds per minute
+Muzzle velocity: 975 m/s
+Maximum effective range: 550 meters
+
+The M16 is still a general-issue rifle with the US Armed
+forces. It is also widely used by the US Law Enforcement
+agencies, either in military form (for example, the LAPD
+had some M16s, retired from Army), or in "civilian"
+semi-automatic only form. The AR-15 style rifles are made
+in the USA by at least dozen large companies, such as
+Armalite, Bushmaster, Colt, FN Manufacturing, Hesse, Les
+Baer, Olympic, Wilson Combat, and by number of smaller
+companies, many of which do assembly their rifles from
+components made by some other major manufacturers.
+M16-type rifles also manufactured outside of the USA,
+most notably in the Canada, by Diemaco Co. China also
+makes some AR-15 type rifles at NORINCO state factories.
+M16 rifles are used by many foreign military groups, most
+notably the British SAS, who preferred the M16 over the
+infamous L85A1 rifle, and by many others.

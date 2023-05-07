@@ -1,0 +1,21 @@
+Cloaking Device
+==========================================================
+
+Type: Advanced Camouflage
+Weight: 0.82 kg
+Action: Phase shifting bubble
+
+Personal cloaking devise for the system lords and various
+assassins, the Cloaking device is one of the biggest
+advantages on the battlefield. Its only rival is the 
+T.E.R, which will easily spot a user unless well
+positioned. Though it stops light it is only a small phase
+shift and will still allow the emission of heat and sound
+from the wearer. This means any direct contact with the
+enemy or loud footsteps may give away your position.
+Unfortunately the cloak will phase back to normal for a
+short time when passing matter or energy in and out of the
+bubble at high speed or mass quantity. Any firing of
+weapons or throwing of objects will instantly have this
+effect. The advantages of this device only stay effective
+if used with correct tactics.

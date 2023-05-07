@@ -1,0 +1,13 @@
+Smoke Grenade 
+==========================================================
+
+Type: Visual Impairing device
+Action: Chemical reaction, Chemical release
+
+Smoke grenades are a cheap and simple to use visual
+protection tool. These use the standard G62 chemical
+release canisters with a pin release pressure lock. The
+Best way to use this tool is to cover an advance down long
+narrow paths where snipers could be a problem. It is also
+recommended for street crossing and placing in likely
+sniper vantage points. 

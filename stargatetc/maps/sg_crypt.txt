@@ -1,0 +1,24 @@
+Auteur    : REX and Speed
+Game Type : Team Deathmatch/Ticket
+Max player: 32 players
+
+-------------------------------------------------------
+Perdue dans un labyrinthe à la recherche d'artefacts anciens, une equipe 
+Torri est prise à parti par des troupes goa'ulds...
+
+-------------------------------------------------------
+
+Briefing :
+
+Tau'ri: Eliminez les goa'ulds et reduisez-les en pâtée de symbiotes...!!
+
+Goa'uld: Faites un carnage...les prisonniers ne seront pas admis !!
+
+-------------------------------------------------------
+
+Dates:            Compilation ultime le 21/04/05 + modifs le 10/07/05
+Durée:            2 semaines de travail
+Textures:         Return To Castle Wolfenstein
+HD textures :     Sgt. Leon (merci à lui...)
+Sky:              xt_grhills sur www.mapping-area.com
+============================================================

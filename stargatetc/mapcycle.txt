@@ -1,0 +1,5 @@
+sg_loop
+sg_quietvillage
+sg_nox
+sg_chateau
+sg_land3

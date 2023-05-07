@@ -1,0 +1,13 @@
+Hand Grenade
+==========================================================
+
+Type: Crude explosive weapon
+Weight: 2.5 kg
+Action: Squeeze handle & fuse
+
+The Hand grenade is a simple explosive charge originally
+designed for clearing trenches and foxholes. Its outer
+shell is designed to create shrapnel and provide a easy
+grip in the worst possible conditions. The hand grenade is
+best used to clear paths before advancing or covering an
+escape. 

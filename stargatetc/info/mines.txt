@@ -1,0 +1,11 @@
+D-32 Land Mines
+==========================================================
+
+Diameter: 260mm
+Action: Electrical circuit disconnection, pin & clamp
+Detonation: When pressure is released from pin
+
+D-32 land mine uses dynamic camouflage technology obtained
+from the Tok’ra. The mine packs a small c4 charge designed
+to disable the enemy rather than kill, but when used in
+groups can be quite deadly.

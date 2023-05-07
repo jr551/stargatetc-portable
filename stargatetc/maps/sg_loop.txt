@@ -1,0 +1,28 @@
+Author : ** Colonel C4 ** colonelc4@free.fr
+Textures : ** Colonel C4 **, lemog, JhonFive
+Sky : the Mighty Pete
+Game mode : Teamplay
+Special thanks to : Chris Auty, de_aztec creator
+
+--------------------------------------------------------------------------------
+
+On P4X869, there is a device made by the ancients, which allows
+time travel. sg-1 and sg-15 arrived earlier and discovered that the
+ancients could never get the device to work. Unfortunately, Anubis
+discovered this device and wants to use it. He succeed in opening
+a temporal gate 400 years into the past. Sg-1 infiltrated the gate.
+Anubis ordered the device disabled while sg-1 was in the past.
+Unfortunately, he never thought that they could reactivate the
+machine 400 in the past...
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri: You need to reactivate the device and kill some goa'uld.
+During the loading time, go into the gate to return to the present
+and disactivate the goa'uld shields.
+
+Goa'uld: Prevent SG-1 from returning to the present! if they succeed,
+kill them.
+
+--------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+Author: ** Colonel C4 ** <colonelc4@free.fr>
+Textures: ** Colonel C4 ** lemog
+Game Type: Activate the Naquadria bomb
+6 - 32 players
+
+------------------------------------------------------------------------
+
+Sg-12 discovered a mothership, a strange mothership: in fact
+it was a new goa'uld design from aponubis. Aponubis is the result
+of a genetic crossing between apophis and anubis (apophis wanted
+to live again and anubis wanted to make genetic splicing, so they 
+both came to an agreement) This goa'uld uses his mothership
+as a cargo hauler, carrying weapons and other supplies to battle.
+It allow him to move weapons from place to place quickly. This
+discovery was too good for sg-1, they plan to destroy the whole
+cargo deck with one bomb.
+------------------------------------------------------------------------
+
+Briefing:
+
+Tau’ri: take the control board, allowing you to activate the 
+naquadria bomb which is situated on the other side of the ship.
+
+Goa'uld: kree shak jaffa. Golnek kree tel kra!
+...
+don't laugh in front of your god, the genetic splicing is not very
+good. the orders are simple. If you did't understand, just have a
+look at tau'ri briefing, the shol'va is with us, you must prevent
+the bombing!
+
+------------------------------------------------------------------------

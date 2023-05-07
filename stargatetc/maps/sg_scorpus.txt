@@ -1,0 +1,28 @@
+            *****************
+          **** sg_scorpus  ****
+            *****************
+
+Map by          : Endolaylith
+Textures by     : Endolaylith
+Sky             : Unknown
+Gameplay        : Teamplay
+
+--------------------------------------------------------------------------------
+
+SG-1 has been attempting to secure technolegy from an alien outpost which
+has been long abandoned by it's creators. SG-1 has unwillingly revealed
+their location by activating the power core of the complex. However,
+the Goa'uld mothership which had been sent to investigate has been
+destroyed by an automated defence grid. The survivors of the crash later
+found the stargate but without a dhd they could not return to their
+master.
+
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri: Defend Underground complex and it's technolegy from the Goa'uld
+
+Goa'uld: Kill SG-1 and secure the advanced technolegy
+
+--------------------------------------------------------------------------------

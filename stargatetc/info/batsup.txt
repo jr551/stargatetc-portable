@@ -1,0 +1,19 @@
+Torture Stick
+==========================================================
+
+Overall Length: 450mm
+Head Length: 33mm
+Action: Flesh Ionisation, Neural stimulation
+
+The Goa’uld torture stick uses a positive ion generator to
+stimulate every pain receptor neuron in the human body.
+The ions are released from the head when pressed against a
+surface delivering the ions at an almost fatal level. The
+torture stick can kill if applied for too great a time
+because it ionises the flesh making all tissues break
+their atomic bonds. On higher settings, the ions travel
+down the neural connections like wires and release
+themselves into any oxygen environment available when over
+saturated. Evidence of this can be seen as bright light
+coming from the eyes and mouth.
+

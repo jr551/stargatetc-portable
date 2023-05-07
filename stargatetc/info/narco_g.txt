@@ -1,0 +1,15 @@
+Narcotic Gas Grenade 
+==========================================================
+
+Type: Psychotropic drug gas
+Action: Chemical release, Chemical Mixture
+
+Narcotic gas grenades are an effective way to render enemy
+troops skills disabled by confusing and disorientating
+them. It is made of a synthetic mind-altering drug witch
+is absorbed though the skin and by breathing. Snipers are
+the most effected by this weapon as it makes aiming almost
+impossible to even the best-trained soldier. The effects
+of this drug can last up to three minutes, which was the
+attractive feature for the air force as any captured troop
+would be able to be interrogated without a dry out period.

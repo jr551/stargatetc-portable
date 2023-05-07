@@ -1,0 +1,14 @@
+// overview description file for sg_stargate
+
+global 
+{
+	ZOOM	0.97
+	ORIGIN	123.50 -507.50 2958.50
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_stargate.tga"
+	HEIGHT	1948.00
+}

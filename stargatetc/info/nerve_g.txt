@@ -1,0 +1,12 @@
+Nerve Gas Grenade 
+==========================================================
+
+Type: Neural Depressant and Sedative
+Action: Chemical release
+ 
+Using the standard G62 gas canisters, the Nerve gas
+grenade can be quickly released. Its primary effects are
+impaired vision and sedation. Though its effects are
+strong they quickly disappear after the exposure has
+ended. Best tactical sue of this combat tool is ambush, to
+be released at the foot of the enemy.

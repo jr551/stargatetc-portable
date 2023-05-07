@@ -1,0 +1,15 @@
+Colonel Jack O'Neill:
+=====================
+Jack is a United States AirForce
+Colonel. He lead the original Stargate
+mission to Abydos and is the leader of
+the SG-1 team.
+
+Stats:
+=============
+
+Speed: Medium
+Weapons: Heavy
+Armour: Heavy
+
+Special: None

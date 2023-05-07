@@ -1,0 +1,30 @@
+HK PSG1
+==========================================================
+
+Caliber: 7.62 x 51mm NATO (.308 Win)
+Action: Semi-automatic, roller-delayed blowback
+Barrel: 650 mm
+Overall length: 1208 mm
+Weight: 8.10 kg with scope and no magazine
+Magazine: 5 or 20 round detachable box
+Scope: Hendsoldt 6x42, 6 settings from 100 to 600 meters
+Expected accuracy: Sub-1MOA with match grade ammunition
+
+The PSG-1 sniper system (PrazisionsSchutzenGewehr, or 
+"high-precision marksman's rifle" in English) had been 
+developed by the German company Heckler - Koch by the 
+mid-1980s as an ultimate police and counter-terror weapon.
+Some German elite law-enforcement groups, like GSG or 
+KSK-9, participate in this development, and since its 
+introduction the PSG-1 had been adopted by various police 
+forces in Europe and Americas. It is way too heavy and 
+somewhat too gentle for military use, so it never seen any
+military use. Instead, HK developed two more sniper 
+weapons. The first, that actually preceded the PSG-1, was
+the G3-SG1, an accurized and scope-fitted version of the
+basic G3 automatic rifle for German Army. And in the
+mid-1980s HK also developed a derivative of the PSG-1,
+called MSG-90, for export military sales. The PSG-1 is
+still offered by the HK, and is one of the most expensive
+factory-made sniper rifles on the market, hitting the
+$10.000 price tag in the basic package. 

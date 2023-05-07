@@ -1,0 +1,142 @@
+// NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
+//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+// Multiplayer options script
+//
+// Format:
+//  Version [float]
+//  Options description followed by 
+//  Options defaults
+//
+// Option description syntax:
+//
+//  "cvar" { "Prompt" { type [ type info ] } { default } }
+//
+//  type = 
+//   BOOL   (a yes/no toggle)
+//   STRING
+//   NUMBER
+//   LIST
+//
+// type info:
+// BOOL                 no type info
+// NUMBER       min max range, use -1 -1 for no limits
+// STRING       no type info
+// LIST          delimited list of options value pairs
+//
+//
+// default depends on type
+// BOOL is "0" or "1"
+// NUMBER is "value"
+// STRING is "value"
+// LIST is "index", where index "0" is the first element of the list
+
+
+// Half-Life Server Configuration Layout Script (stores last settings chosen, too)
+// File generated:  Sat Dec 22 11:39:10 AM
+//
+//
+// Cvar	-	Setting
+
+VERSION 1.0
+
+DESCRIPTION SERVER_OPTIONS
+{
+	"mp_teamplay"
+	{
+		"Game mode"
+		{
+			LIST
+			"NeedstobeOne" "1"
+		}
+		{ "1.000000" }
+	}
+	"mp_gamemode"
+	{
+		"Game mode"
+		{
+			LIST
+			"Normal" "0"
+			"Ticket mode" "1"
+			"Conflict mode" "2"
+			"Rambo mode" "3"
+			"Captain mode" "4"
+		}
+		{ "1.000000" }
+	}
+
+	"mp_skulls"
+	{
+		"Ghost Skulls mode"
+		{
+			LIST
+			"None" "0"
+			"Camper Hunt" "1"
+			"Skull flood" "2"
+		}
+		{ "0.000000" }
+	}
+
+	"mp_friendlyfire"
+	{
+		"Friendly fire"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"mp_instantdeath"
+	{
+		"Instant Death"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"mp_autobalance"
+	{
+		"Max. player difference between two teams (0 = Infinite)"
+		{ NUMBER 0.000000 5.000000 }
+		{ "2.000000" }
+	}
+
+	"mp_timelimit"
+	{
+		"Time limit (minutes)"
+		{ NUMBER 0.000000 -1.000000 }
+		{ "45.000000" }
+	}
+
+	"mp_tacdistance"
+	{
+		"Tac spread distance"
+		{ NUMBER 0.000000 1500.000000 }
+		{ "600.000000" }
+	}
+
+	"mp_tickets"
+	{
+		"Start tickets number (ticket mode)"
+		{ NUMBER 1.000000 99.000000 }
+		{ "40.000000" }
+	}
+
+	"mp_respawntime"
+	{
+		"Time before respawn (ticket mode)"
+		{ NUMBER 1.000000 10.000000 }
+		{ "5.000000" }
+	}
+
+	"mp_roundspermap"
+	{
+		"Rounds per map (ticket mode)"
+		{ NUMBER 1.000000 100.000000 }
+		{ "15.000000" }
+	}
+
+	"mp_structhp"
+	{
+		"Structure health points (conflict mode) (0 = default)"
+		{ NUMBER 0.000000 1000.000000 }
+		{ "0.000000" }
+	}
+
+}

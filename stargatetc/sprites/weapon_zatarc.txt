@@ -1,0 +1,8 @@
+7
+weapon			640 weapons/zatarc	0	0	176	48
+weapon_s		640 weapons/zatarc	0	0	176	48
+sgtcweapon		640 weapons/zatarc	0	0	176	48
+crosshair		640 crosshairs/zatarc      0	0	40	40
+autoaim			640 crosshairs/zatarc      0	0	40	40
+zoom                    640 crosshairs/zatarczoom     0    0       256	256
+zoom_autoaim            640 crosshairs/zatarczoom     0    0       256  256

@@ -1,0 +1,14 @@
+// overview description file for sg_prison
+
+global 
+{
+	ZOOM	1.15
+	ORIGIN	-104.00 605.50 -421.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_prison.tga"
+	HEIGHT	-421.00
+}

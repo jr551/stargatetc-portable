@@ -1,0 +1,17 @@
+// overview description file for sg_tekluhanak.bsp
+
+
+
+global 
+{
+	ZOOM	0.83
+	ORIGIN	16.00 352.00 -152.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_tekluhanak.tga"
+	HEIGHT	-1009.00
+}
+

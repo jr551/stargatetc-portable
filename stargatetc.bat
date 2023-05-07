@@ -1,0 +1,1 @@
+xash3d.exe -game stargatetc

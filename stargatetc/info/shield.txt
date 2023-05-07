@@ -1,0 +1,16 @@
+Personal Shielding Device
+==========================================================
+
+Type: Goa'uld Protective Device
+Action: Particle Barrier
+
+The Personal Shield blocks all forms of energy or matter
+passing into its field at high speed. There are two main
+disadvantages with this device. Firstly When activated you
+cannot move without passing through the barrier and
+interrupting the flow direction. The emitter will be able
+to keep the barrier in the same position as long as the
+user stays inside. Secondly it does not stop slower moving
+objects so to allow fresh air to enter the barrier.
+Because of this weakness it has no defence against unarmed
+combat or thrown objects.

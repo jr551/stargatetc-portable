@@ -1,0 +1,19 @@
+// overview description file for sg_chateau.bsp
+// by CmC The Custom Map Community http://cmc.w4y.at
+// and my-rip clan visit http://my-rip.azn-style.com
+// sponsor http://www.world4you.com
+// Ov createt by Codeman.at aka Andrew C (stargatetc name Bra'Tac)
+// Stargatetc Server : 80.243.163.157:27025 Cheyenne Mountain-Stargate Headquarter@w4y.at
+
+global 
+{
+	ZOOM	1.52
+	ORIGIN	0.00 -160.00 544.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_chateau.tga"
+	HEIGHT	-641.00
+}

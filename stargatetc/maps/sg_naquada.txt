@@ -1,0 +1,33 @@
+            *****************
+          **** sg_naquada  ****
+            *****************
+
+Map by          : SILENT-H@NTER 
+gaylord.alloucherie@club-internet.fr
+Textures by     : Silent-hunter, Karyboo, Brophis
+Sky             : 
+Gameplay        : Teamplay 
+
+--------------------------------------------------------------------------------
+
+During a previous mission, SG-9 had managed to take control 
+of a naquada mine. The planet is now beeing surrounded by a fleet 
+of enemy ships and SG-9 has order to blow up the planet and with 
+all the naquada it should be sufficient enough to blow up the 
+whole solar system, but regrettably trying to neutralize the guards,
+the commander in chief, who was the only one who has the activation
+codes from the naquada bomb, was damaged and the rest of the team had 
+to get him back to Earth for medical support.
+
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri: Go and activate the bomb which is in the heart 
+of a spring on that planet before the Goa'ulds can defuse
+the bomb.
+
+Goa'uld: Return to the planet and neutralize the Tau'ri,
+or capture their base.
+
+--------------------------------------------------------------------------------

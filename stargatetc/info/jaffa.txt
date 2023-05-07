@@ -1,0 +1,15 @@
+Jaffa:
+======
+Slave to the Goa'uld and Trained from
+A young age with only one function,
+to serve the goa'uld as warriors.
+ 
+Stats:
+=============
+
+Speed: Fast
+Weapons: Medium
+Armour: Light
+
+Special: Goa'uld Symbiote
+

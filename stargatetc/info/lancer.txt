@@ -1,0 +1,16 @@
+Staff Weapon
+==========================================================
+
+Type: Goa'uld Plasma Weapon
+
+The Staff Weapon is the primary fighing tool for the jaffa
+The staff builds up plasma energy by passing pure hydrogen
+back and forth at a rapid speed over a series of
+superheated naquada shaft. When the firing trigger is
+forces, the plasma is then ejected out of it’s
+electromagnetic containment pod which is found on the
+firing end of the staff. It also doubles as a melee weapon
+for close range combat. The Goa'uld designed this weapon
+to inflict fear and panic in their enemies. The staff has
+been known to operate for centuries before requiring a
+cell replacement.

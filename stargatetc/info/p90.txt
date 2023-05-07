@@ -1,0 +1,23 @@
+FN P90
+==========================================================
+
+Caliber: 5.7x28mm SS190
+Weight: 2.54 kg empty
+Lenght: 500 mm
+Barrel lenght: 263 mm
+Rate of fire: 900 rounds per minute
+Magazine capacity: 50 rounds
+Effective range: 200 meters
+
+The FN P90 submachine gun (SMG) was developed in the late
+1980s as a defensive weapon for the troops whose primary
+activities does not include small arms - vehicle and tank
+crew members, artillery crews etc. Standart pistols and
+SMGs chambered for pistol rounds were proved ineffective
+against enemy soldiers, wearing armour (bulletproof) vests,
+so FN Herstal developed a new round with enhanced
+penetration - the SS190. This round looks like scaled
+downt 5.56mm NATO round and forces the pointed, steel
+core bullet to the 600-700 meters per second at the muzzle,
+thus being capable to defeat standart CRISAT helmets and
+armour vests at reasonable distances (50-100 meters). 

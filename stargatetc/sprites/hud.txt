@@ -1,0 +1,189 @@
+255
+
+selection		320 hud/sel     0	0	176	48
+bucket0			320 hud/num/hud-0 0	0	24	24
+bucket1			320 hud/num/hud-1 0	0	24	24
+bucket2			320 hud/num/hud-2 0	0	24	24
+bucket3			320 hud/num/hud-3 0	0	24	24
+bucket4			320 hud/num/hud-4 0	0	24	24
+bucket5			320 hud/num/hud-5 0	0	24	24
+bucket6			320 hud/num/hud-6 0	0	24	24
+bucket7			320 hud/num/hud-7 0	0	24	24
+
+number_0		320 hud/num/0	0	0	16	24
+number_1		320 hud/num/1	0	0	16	24
+number_2		320 hud/num/2	0	0	16	24
+number_3		320 hud/num/3	0	0	16	24
+number_4		320 hud/num/4	0	0	16	24
+number_5		320 hud/num/5	0	0	16	24
+number_6		320 hud/num/6	0	0	16	24
+number_7		320 hud/num/7	0	0	16	24
+number_8		320 hud/num/8	0	0	16	24
+number_9		320 hud/num/9	0	0	16	24
+2points			320 hud/dots	0	0	8	24
+radar			320 hud/radar	0	0	200	200
+needle			320 hud/needle	0	0	32	32
+blip			320 hud/blip	0	0	16	16
+
+d_skull			320 weapons/d_ghost       0	0	48	16
+d_batsup                320 weapons/d_batsup      0	0	48	16
+d_coujaf                320 weapons/d_coujaf      0	0	48	16
+d_couteau               320 weapons/d_couteau     0	0	48	16
+d_gacgoa                320 weapons/d_gacgoa      0	0	48	16
+d_grenade               320 weapons/d_grenade     0	0	48	16
+d_main                  320 weapons/d_handdevice  0	0	48	16
+d_larve                 320 weapons/d_larve       0	0	48	16
+d_m16                   320 weapons/d_m16         0	0	48	16
+d_m92s                  320 weapons/d_m92s        0	0	48	16
+d_mp5                   320 weapons/d_mp5         0	0	48	16
+d_p90                   320 weapons/d_p90         0	0	48	16
+d_psg1                  320 weapons/d_psg1        0	0	48	16
+d_lance                 320 weapons/d_staffweapon 0	0	48	16
+d_lance_proj            320 weapons/d_staffweapon 0	0	48	16
+d_big_lance_proj        320 weapons/d_glstaff     0	0	64	16
+d_reetou                320 weapons/d_ter         0	0	48	16
+d_reetou_proj           320 weapons/d_ter         0	0	48	16
+d_zat                   320 weapons/d_zat         0	0	48	16
+d_zatarc                320 weapons/d_zatarc      0	0	48	16
+zat_touch		320 weapons/d_zap    	  0	0	64	64
+drugs    		320 weapons/d_drugs    	  0	0	64	64
+d_tac                   320 weapons/d_tac         0	0	48	16
+d_headshot              320 weapons/d_headshot    0	0	48	16
+d_mine                  320 weapons/d_mine        0	0	48	16
+d_mustardgrenade        320 weapons/d_mustardgrenade    0	0	48	16
+d_satchel               320 weapons/d_c4          0	0	64	32
+d_spas                  320 weapons/d_spas        0	0	64	32
+d_medic                 320 weapons/d_medic       0	0	64	32
+d_goaregen              320 weapons/d_goaregen    0	0	64	32
+d_glstaff               320 weapons/d_glstaff     0	0	64	16
+d_usas                  320 weapons/d_usas        0	0	64	32
+
+//===========================hud and player sutff===============================
+
+moo			640 avatars/anubis	  0	0	64	64
+anubis			640 avatars/anubis	  0	0	64	64
+carter			640 avatars/carter	  0	0	64	64
+commander		640 avatars/commder	  0	0	64	64
+goauld3			640 avatars/goauld3	  0	0	64	64
+jackson			640 avatars/jackson	  0	0	64	64
+oneill			640 avatars/oneill	  0	0	64	64
+horus			640 avatars/horus	  0	0	64	64
+snakegoauld		640 avatars/snake	  0	0	64	64
+systemlord		640 avatars/lord	  0	0	64	64
+tealc			640 avatars/tealc	  0	0	64	64
+inconnu			640 avatars/inconnu	  0	0	64	64
+
+port_left		640 hud/portrait_left	  0	0	16	104
+port_mid	        640 hud/portrait_middel	  0	0	80	104
+port_right		640 hud/portrait_right	  0	0	16	104
+
+hud_left		640 hud/hud_left          0	0	200	168
+hud_right		640 hud/hud_right	  0	0	200	168
+armor_bar		640 hud/statbar		  0	0	16	64
+life_bar		640 hud/statbar		  0	0	16	64
+stamn_bar		640 hud/statbar		  0	0	16	64
+ammoline		640 hud/line		  0	0	16	24
+bombkey		        640 hud/key		  0	0	72	48
+tac_red		        640 hud/tac_red		  0	0	64	8
+tac_yellow	        640 hud/tac_yellow	  0	0	64	8
+tac_green	        640 hud/tac_green	  0	0	64	8
+ticketdock		640 hud/ticketdock        0	0	120	64
+pbar 		        640 hud/pbar              0	0	128	32
+pbare   	        640 hud/pbare             0	0	144	48
+tacdisp			640 hud/tacdisp	          0	0	104	40
+slidein		        640 hud/slidein	          0	0	160	104
+
+//----------------------------------------------------------------
+selection		640 hud/sel     0	0	176	48
+bucket0			640 hud/num/hud-0 0	0	24	24
+bucket1			640 hud/num/hud-1 0	0	24	24
+bucket2			640 hud/num/hud-2 0	0	24	24
+bucket3			640 hud/num/hud-3 0	0	24	24
+bucket4			640 hud/num/hud-4 0	0	24	24
+bucket5			640 hud/num/hud-5 0	0	24	24
+bucket6 		640 hud/num/hud-6 0	0	24	24
+bucket7 		640 hud/num/hud-7 0	0	24	24
+
+number_0		640 hud/num/0	0	0	16	24
+number_1		640 hud/num/1	0	0	16	24
+number_2		640 hud/num/2	0	0	16	24
+number_3		640 hud/num/3	0	0	16	24
+number_4		640 hud/num/4	0	0	16	24
+number_5		640 hud/num/5	0	0	16	24
+number_6		640 hud/num/6	0	0	16	24
+number_7		640 hud/num/7	0	0	16	24
+number_8		640 hud/num/8	0	0	16	24
+number_9		640 hud/num/9	0	0	16	24
+2points			640 hud/dots	0	0	8	24
+
+
+d_skull			640 weapons/d_ghost       0	0	48	16
+d_batsup                640 weapons/d_batsup      0	0	48	16
+d_coujaf                640 weapons/d_coujaf      0	0	48	16
+d_couteau               640 weapons/d_couteau     0	0	48	16
+d_gacgoa                640 weapons/d_gacgoa      0	0	48	16
+d_grenade               640 weapons/d_grenade     0	0	48	16
+d_main                  640 weapons/d_handdevice  0	0	48	16
+d_larve                 640 weapons/d_larve       0	0	48	16
+d_m16                   640 weapons/d_m16         0	0	48	16
+d_m92s                  640 weapons/d_m92s        0	0	48	16
+d_mp5                   640 weapons/d_mp5         0	0	48	16
+d_p90                   640 weapons/d_p90         0	0	48	16
+d_psg1                  640 weapons/d_psg1        0	0	48	16
+d_lance                 640 weapons/d_staffweapon 0	0	48	16
+d_lance_proj            640 weapons/d_staffweapon 0	0	48	16
+d_big_lance_proj        640 weapons/d_glstaff     0	0	48	16
+d_reetou                640 weapons/d_ter         0	0	48	16
+d_reetou_proj           640 weapons/d_ter         0	0	48	16
+d_zat                   640 weapons/d_zat         0	0	48	16
+d_zatarc                640 weapons/d_zatarc      0	0	48	16
+zat_touch		640 weapons/d_zap    	  0	0	64	64
+drugs    		640 weapons/d_drugs    	  0	0	64	64
+d_tac                   640 weapons/d_tac         0	0	48	16
+d_headshot              640 weapons/d_headshot    0	0	48	16
+d_mine                  640 weapons/d_mine        0	0	48	16
+d_mustardgrenade        640 weapons/d_mustardgrenade    0	0	48	16
+d_satchel               640 weapons/d_c4          0	0	64	32
+d_spas                  640 weapons/d_spas        0	0	64	32
+d_medic                 640 weapons/d_medic       0	0	64	32
+d_goaregen              640 weapons/d_goaregen    0	0	64	32
+d_glstaff               640 weapons/d_glstaff     0	0	64	16
+d_usas                  640 weapons/d_usas        0	0	64	32
+
+//===========================hud and player sutff===============================
+
+moo			640 avatars/anubis	  0	0	64	64
+anubis			640 avatars/anubis	  0	0	64	64
+carter			640 avatars/carter	  0	0	64	64
+commander		640 avatars/commder	  0	0	64	64
+goauld3			640 avatars/goauld3	  0	0	64	64
+jackson			640 avatars/jackson	  0	0	64	64
+oneill			640 avatars/oneill	  0	0	64	64
+horus			640 avatars/horus	  0	0	64	64
+snakegoauld		640 avatars/snake	  0	0	64	64
+systemlord		640 avatars/lord	  0	0	64	64
+tealc			640 avatars/tealc	  0	0	64	64
+inconnu			640 avatars/inconnu	  0	0	64	64
+
+port_left		640 hud/portrait_left	  0	0	16	104
+port_mid	        640 hud/portrait_middel	  0	0	80	104
+port_right		640 hud/portrait_right	  0	0	16	104
+
+hud_left		640 hud/hud_left          0	0	200	168
+hud_right		640 hud/hud_right	  0	0	200	168
+armor_bar		640 hud/statbar		  0	0	16	64
+life_bar		640 hud/statbar 	  0	0	16	64
+stamn_bar		640 hud/statbar		  0	0	16	64
+ammoline		640 hud/line		  0	0	16	24
+bombkey		        640 hud/key		  0	0	72	48
+tac_red		        640 hud/tac_red		  0	0	64	8
+tac_yellow	        640 hud/tac_yellow	  0	0	64	8
+tac_green	        640 hud/tac_green	  0	0	64	8
+ticketdock		640 hud/ticketdock        0	0	120	64
+pbar 		        640 hud/pbar              0	0	128	32
+pbare   	        640 hud/pbare             0	0	144	48
+radar			640 hud/radar	          0	0	200	200
+needle			640 hud/needle	          0	0	32	32
+blip			640 hud/blip	          0	0	16	16
+tacdisp			640 hud/tacdisp	          0	0	104	40
+slidein		        640 hud/slidein	          0	0	160	104

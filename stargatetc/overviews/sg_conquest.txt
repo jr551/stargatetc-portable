@@ -1,0 +1,14 @@
+// overview description file for sg_conquest
+
+global 
+{
+	ZOOM	0.93
+	ORIGIN	146.50 71.50 -1134.50
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/sg_conquest.tga"
+	HEIGHT	-3136.00
+}

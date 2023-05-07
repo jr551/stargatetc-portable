@@ -1,0 +1,18 @@
+Goa'uld Hand Device (Ribbon Device)
+==========================================================
+
+Weight: 2.3kg
+Action: Atomic Disassembly, Atomic Displacement
+
+With concentration and practise the hand device can be a
+devastating weapon. Primarily it delivers lepton stream
+into a narrow area creating an atomic interference field,
+which also has the side effect of creating great heat. Its
+Secondary use is a lepton pulse, which forces any matter
+in its patch to be carried away with its wave. People can
+only use this weapon with Naquada in his/her blood. The
+weapon scans the neural activity in the users fingertips
+and fires on detection of specific messages, that the user
+must be trained to produce.
+
+

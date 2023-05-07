@@ -1,0 +1,6 @@
+5
+weapon			640 weapons/goaregen  	0	0	176	48
+weapon_s		640 weapons/goaregen 	0	0	176	48
+sgtcweapon		640 weapons/goaregen  	0	0	176	48
+crosshair		640 crosshairs/goaim      0	0	64	64
+autoaim			640 crosshairs/goaim      0	0	64	64

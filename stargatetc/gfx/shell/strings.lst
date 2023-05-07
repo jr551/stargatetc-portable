@@ -1,0 +1,18 @@
+189	" " // New Game
+190	" " // Hazard Course
+191	" " // Load Game
+192     " " // Load/save game
+// 193		Configuration
+194	"The Half-Life Readme" // Readme.txt
+196	" " // Quit
+197 	" " //quickstart server
+// 198     "" // Internet
+236     "Are you sure you want to quit?" // Quit?
+288	"Chat with fellow players" //talk online to ....
+400	" " // Preview
+402	"www.stargatetc.com" // URL Preview 
+416	"Visit www.stargatetc.com"
+417	"www.stargatetc.com"
+426	" " //Visit steam
+503	"Disabled."
+530	"Play/download other mods, or go back to Half-Life."

@@ -1,0 +1,1 @@
+tir primaire de la main

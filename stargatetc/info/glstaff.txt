@@ -1,0 +1,16 @@
+Glider Staff
+==========================================================
+
+The Glider Staff is a larger form of the widely used staff
+weapon. The clever design allows for the easy removal of
+the unit for troop use but requires training to operate
+without causing self harm. The staff builds up plasma
+energy by passing pure hydrogen back and forth at a rapid
+speed over a series of superheated naquada shaft. When the
+firing trigger is forces, the plasma is then ejected out
+of it’s electromagnetic containment pod which is found on
+the firing end of the staff. With the amount of plasma
+ejected in the glider version of the staff it can produce 
+a recoil rating of up to 78. Dammage is extreme and all
+firing should be a aimed at least 20-30 meters from the
+user.

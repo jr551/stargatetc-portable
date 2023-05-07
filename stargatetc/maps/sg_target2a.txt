@@ -1,0 +1,35 @@
+Author            : **Colonel C4** mr.lag@wanadoo.fr
+Modification :        REX
+Textures     : **Colonel C4**, Remedy
+lemog: www.3dtextures.fr.st 
+Sky             : Unknown
+Gameplay        : Teamplay
+
+--------------------------------------------------------------------------------
+
+Daniel Jackson’s Grand father had a theory according 
+to which a crystal skull could take you to meet the
+"extraterrestrial giants". Nobody believed him, 
+until one day the Tok'ra intercepted a communication from
+one of Apophis's vessels: this vessel claimed having 
+discovered the planet of the "giants" and gets ready 
+to destroy the Earth. Apophis sends a sort of probe to Earth, 
+but regrettably, it deactivates during the dropping... 
+This probe serves for analyzing the ground of the Earth so 
+that Apophis can modify his bomb according to the environement 
+of the Earth, so he can blow up the Earth.
+
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri: Prevent the Goa'ulds from activating the probe !! 
+If you fail then kill all Goa'ulds before they escape, 
+it should stop the data from reaching Apophis.
+
+Goa'uld: Message of Apophis
+"Bring this data back to me ! Do not fail this mission,
+because your god will not deactivate the shields while 
+your mission aint finished sukka. Jaffa Kree !"
+
+--------------------------------------------------------------------------------

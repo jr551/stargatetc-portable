@@ -1,0 +1,7 @@
+5
+sgtcweapon		640 weapons/m92s	0	0	176	48
+weapon			640 weapons/m92s	0	0	176	48
+weapon_s		640 weapons/m92s	0	0	176	48
+crosshair		640 crosshairs/aim      0	0	64	64
+autoaim			640 crosshairs/aim      0	0	64	64
+

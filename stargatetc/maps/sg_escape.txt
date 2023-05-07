@@ -1,0 +1,26 @@
+            *****************
+          ****  sg_escape  ****
+            *****************
+
+Map by          : Brophis 
+Textures by     : Brophis, Colenel C4, BiOhAzArD, & Lunaran
+Sky             : Blue 
+Gameplay        : Teamplay escape
+
+--------------------------------------------------------------------------------
+
+SG-1 has encountered a Goa'uld systemlord and a group of Jaffa 
+on an abandoned planet. The planet contains advanced alien 
+technology which may effect the outcome of the battle 
+between the Tau'ri and the Goa'uld.
+
+--------------------------------------------------------------------------------
+
+Briefing: 
+
+Tau'ri: Escape through the stargate and activate the iris.
+
+Goa'uld: Escape through the stargate and use the ring transporters to
+get back to the mothership.
+
+--------------------------------------------------------------------------------

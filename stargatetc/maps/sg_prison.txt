@@ -1,0 +1,39 @@
+SG_PRISON
+
+Map by:      DarkKyp
+Textures by: DarkKyp, StargateTC, BerneyBoy, sock
+Sky by:      StargateTC
+Models by:   DarkKyp, StargateTC,
+Used Prefabs (by): Ringtransporter (Darkfighter & Brophis), 
+                   Stargate & DHD (Brophis)
+Game Type:   Team Deathmatch / Naquadah bomb
+Players:     6 to 16
+
+------------------------------------------------------------------------
+
+Your SG team traveled to a planet with an old and almost forgotten 
+Goa'uld prison located on it. While you prepared a naquadah bomb at 
+the ring transporters, a Goa'uld patrol overwhelmed you and put you 
+in jail. 
+Stupid like Jaffa are, they forgot to disarm you. But you have luck 
+and a technical malfunction kills your guards and releases you of your 
+cell. Take the chance and escape to the gate to get the bomb key and 
+activate the naquadah bomb. Then get some distance between you and the 
+bomb. Reach the stargate within 35 seconds and you should 
+be in safe distance.
+
+------------------------------------------------------------------------
+
+Briefing:
+
+Tau'ri: 
+Return to the stargate to get the bomb key. Head back to the 
+ring transporter to activate the bomb and then escape to the stargate 
+again. You have 35 seconds till the bomb detonates.
+
+Goa'uld: 
+Prevent the Tau'ri from activating the bomb. Kill them!
+
+------------------------------------------------------------------------
+
+not final - 16.04.05
