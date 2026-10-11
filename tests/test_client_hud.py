@@ -45,6 +45,23 @@ def ticket_dock_number_y(screen_h: int) -> int:
     return screen_h - 0x25
 
 
+def announce_scroller_origin(screen_w: int, screen_h: int) -> tuple[int, int]:
+    """ref @0x10074479 — 5-line announce box anchor."""
+    line_h, gap, n = 0xc, 3, 5
+    base_x = screen_w // 2 - ((line_h + gap) * n) * 2
+    base_y = screen_h // 5 - (line_h * (n + gap)) // 2
+    if base_y < 0x69:
+        base_y = 0x69
+    return base_x, base_y
+
+
+def concuss_announce_pending(payload: bytes) -> tuple[int, int]:
+    """ref FUN_100592cf — byte0 concuss, byte1 DAT_100f1ce8."""
+    if len(payload) < 2:
+        raise ValueError("Concuss needs 2 bytes")
+    return payload[0], payload[1]
+
+
 def vote_cast_line_y(screen_h: int, line: int) -> int:
     """ref @0x10076464 — line 0=#SELPREF, 1..5=#MODE0..4."""
     mid = screen_h // 2
@@ -175,6 +192,15 @@ def main() -> int:
         errors += 1
     if vote_cast_line_y(600, 0) != 250 or vote_cast_line_y(600, 3) != 300:
         print("FAIL vote cast line Y", vote_cast_line_y(600, 0), vote_cast_line_y(600, 3))
+        errors += 1
+
+    ax, ay = announce_scroller_origin(640, 480)
+    if (ax, ay) != (640 // 2 - 150, 0x69):
+        print("FAIL announce scroller origin", (ax, ay))
+        errors += 1
+    c0, c1 = concuss_announce_pending(bytes([0, 17]))
+    if (c0, c1) != (0, 17):
+        print("FAIL concuss wire", (c0, c1))
         errors += 1
 
     client = ROOT / "hlsdk-portable/build-sgtc/cl_dll/client.so"
