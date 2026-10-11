@@ -50,8 +50,19 @@ def envfull_payload_size() -> int:
 
 
 # Expected field effects (mirrors CHudSgtc handlers).
-def simulate_progress_team_ui_step(team: int, state: int) -> tuple[int, int, int]:
+def progress_slot_step(slot: int, slot_x: list[int], team_row: list[int]) -> int:
+    """ref FUN_1002a9ca: top DAT_100e1a34[i], bottom (&DAT_100e1a6c)[i] -> team[i-14]."""
+    if slot < 14:
+        return slot_x[slot]
+    return team_row[slot - 14]
+
+
+def simulate_progress_team_ui_step(
+    team: int, state: int, slot: int = 2, slot_x: list[int] | None = None, team_row: list[int] | None = None
+) -> tuple[int, int, int]:
     """One ref @0x1002abe2 transition (client-local mirror)."""
+    slot_x = slot_x or [0x10] * 28
+    team_row = team_row or [0] * 28
     cursor = 0
     if team == 0:
         if state < 2:
@@ -60,7 +71,7 @@ def simulate_progress_team_ui_step(team: int, state: int) -> tuple[int, int, int
         if state >= 2:
             state = 0
     elif team == 2:
-        cursor += 0x10
+        cursor += progress_slot_step(slot, slot_x, team_row)
         state = 1
         team = 1
     return team, state, cursor
@@ -111,9 +122,15 @@ def main() -> int:
         print("FAIL Progress cmd 0", p0)
         errors += 1
 
-    t, st, cur = simulate_progress_team_ui_step(2, 0)
+    t, st, cur = simulate_progress_team_ui_step(2, 0, slot=2)
     if (t, st, cur) != (1, 1, 0x10):
         print("FAIL progress team ui step", (t, st, cur))
+        errors += 1
+
+    team_row = [2] + [0] * 27
+    t2, st2, cur2 = simulate_progress_team_ui_step(2, 0, slot=14, team_row=team_row)
+    if (t2, st2, cur2) != (1, 1, 2):
+        print("FAIL progress team ui bottom step", (t2, st2, cur2))
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
