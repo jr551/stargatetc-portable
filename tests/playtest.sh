@@ -75,9 +75,17 @@ for d in engine filesystem cl_dll dlls ref/gl ref/soft; do
   [[ -d "$XASH_ROOT/$d" ]] && XASH_LIBS="${XASH_LIBS:+$XASH_LIBS:}$XASH_ROOT/$d"
 done
 export LD_LIBRARY_PATH="${XASH_LIBS:+$XASH_LIBS:}$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
-timeout 12s "$XASH" -dev 2 -ref soft -game stargatetc -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
+PT_TIMEOUT="${SGTC_TIMEOUT_BIN:-/usr/bin/timeout}"
+set +e
+"$PT_TIMEOUT" 12s "$XASH" -dev 2 -ref soft -game stargatetc -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
   2>&1 | tee "$ROOT/tests/.build/playtest_dedicated.log" | tail -20
-echo "playtest log: tests/.build/playtest_dedicated.log"
+_ded_rc=${PIPESTATUS[0]}
+set -e
+if [[ $_ded_rc -ne 0 && $_ded_rc -ne 124 ]]; then
+  echo "FAIL: dedicated smoke exit $_ded_rc"
+  exit "$_ded_rc"
+fi
+echo "playtest log: tests/.build/playtest_dedicated.log (dedicated exit ${_ded_rc:-0})"
 
 if [[ -x "$ROOT/tests/playtest_client.sh" && "${SGTC_SKIP_CLIENT_SMOKE:-0}" != "1" ]]; then
   echo "== xash client smoke (gating) =="
