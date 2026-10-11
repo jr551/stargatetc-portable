@@ -16,6 +16,10 @@ the normalized "detail" suffix per (command,subject) pair and reports
 mismatches. Behavior-identical binaries produce zero mismatches.
 
 Usage: python3 tests/test_logic.py [--ref PATH] [--built PATH]
+
+Rebuild hl.so for logic tests with exported class methods (stub dlsym):
+  cmake -S hlsdk-portable -B hlsdk-portable/build-dbg \\
+    -DGAMEDIR=$PWD/stargatetc -DSGTC_EXPORT_ALL_SYMBOLS=ON -DCMAKE_BUILD_TYPE=Debug
 """
 import re
 import subprocess
