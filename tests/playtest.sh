@@ -43,7 +43,20 @@ if [[ -z "$XASH" ]]; then
 fi
 
 echo "== xash dedicated smoke (10s) =="
-export LD_LIBRARY_PATH="$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
+export XASH3D_BASEDIR="$ROOT"
+export XASH3D_GAME="stargatetc"
+# FWGS uses XASH3D_BASEDIR (not -basedir) for game discovery.
+if [[ -f "$MOD/gameinfo.txt" ]]; then
+  sed -i 's|^gamedll[[:space:]].*|gamedll\t\t"dlls/hl.dll"|' "$MOD/gameinfo.txt"
+  grep -q gamedll_linux "$MOD/gameinfo.txt" || echo 'gamedll_linux\t"dlls/hl.so"' >> "$MOD/gameinfo.txt"
+  sed -i 's|^gamedll_linux.*|gamedll_linux\t"dlls/hl.so"|' "$MOD/gameinfo.txt" 2>/dev/null || true
+fi
+XASH_ROOT="$(cd "$(dirname "$XASH")/.." && pwd)"
+XASH_LIBS=""
+for d in engine filesystem cl_dll dlls; do
+  [[ -d "$XASH_ROOT/$d" ]] && XASH_LIBS="${XASH_LIBS:+$XASH_LIBS:}$XASH_ROOT/$d"
+done
+export LD_LIBRARY_PATH="${XASH_LIBS:+$XASH_LIBS:}$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
 timeout 12s "$XASH" -dev 2 -ref soft -game "$MOD" -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
   2>&1 | tee "$ROOT/tests/.build/playtest_dedicated.log" | tail -20
 echo "playtest log: tests/.build/playtest_dedicated.log"

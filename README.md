@@ -15,7 +15,7 @@ make -C hlsdk-portable/build-sgtc -j$(nproc)
 ```bash
 python3 tests/test_exports.py      # 92/92 SGTC factories, engine exports PASS
 python3 tests/test_logic.py        # 52/52 behavioral matrix vs ref stc_i386.so
-./tests/playtest.sh                # deploy hl.so + client.so; Xash smoke if 32-bit engine present
+./tests/playtest.sh                # deploy hl.so + client.so; Xash smoke (needs 32-bit FWGS + XASH3D_BASEDIR)
 ```
 
 Upstream mod pack: https://github.com/jr551/stargatetc-portable/archive/refs/heads/main.zip
