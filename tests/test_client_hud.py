@@ -35,6 +35,15 @@ def haskey_payload(mode: int, vote: int) -> bytes:
     return bytes([mode & 0xff, vote & 0xff])
 
 
+def vote_plzvote_visible(vote_count: int, vote_sel: int, portrait_team: int) -> bool:
+    """ref Draw @0x10076292 — #PLZVOTE when team filter on and vote idle."""
+    if not portrait_team:
+        return False
+    if vote_count >= 0 or vote_sel >= 0 or vote_count >= 5:
+        return False
+    return True
+
+
 def envfull_payload_size() -> int:
     """19 WRITE_COORD + 7 BYTE + 1 SHORT = 47 (ref CEnvParticule::SendValue @0x15ec68)."""
     return 19 * 2 + 7 + 2
@@ -89,6 +98,13 @@ def main() -> int:
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
     if b.get("m_iRadarFocusX") != int(64.0 * 8):
         print("FAIL Blip focus", b)
+        errors += 1
+
+    if not vote_plzvote_visible(-1, -1, 1):
+        print("FAIL PLZVOTE guard")
+        errors += 1
+    if vote_plzvote_visible(0, -1, 1):
+        print("FAIL PLZVOTE should hide when count>=0")
         errors += 1
 
     if envfull_payload_size() != 47:

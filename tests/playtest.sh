@@ -71,10 +71,15 @@ if [[ -f "$MOD/gameinfo.txt" ]]; then
 fi
 XASH_ROOT="$(cd "$(dirname "$XASH")/.." && pwd)"
 XASH_LIBS=""
-for d in engine filesystem cl_dll dlls; do
+for d in engine filesystem cl_dll dlls ref/gl ref/soft; do
   [[ -d "$XASH_ROOT/$d" ]] && XASH_LIBS="${XASH_LIBS:+$XASH_LIBS:}$XASH_ROOT/$d"
 done
 export LD_LIBRARY_PATH="${XASH_LIBS:+$XASH_LIBS:}$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
 timeout 12s "$XASH" -dev 2 -ref soft -game stargatetc -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
   2>&1 | tee "$ROOT/tests/.build/playtest_dedicated.log" | tail -20
 echo "playtest log: tests/.build/playtest_dedicated.log"
+
+if [[ -x "$ROOT/tests/playtest_client.sh" ]]; then
+  echo "== optional client smoke (non-gating until VGUI API parity) =="
+  "$ROOT/tests/playtest_client.sh" || echo "WARN: client smoke failed (see tests/.build/playtest_client.log)"
+fi
