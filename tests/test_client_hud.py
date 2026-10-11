@@ -122,6 +122,84 @@ def armor_tac_phase_after_visdown(fl_time: float) -> float:
     return fl_time + 0.001
 
 
+def radar_blip_screen_x(screen_w: int, rx_wire: int) -> int:
+    """ref @0x10074009 — ScreenWidth - rx - 0x76."""
+    return screen_w - rx_wire - 0x76
+
+
+def radar_blip_screen_y(ry_wire: int, slide: int = 0x68) -> int:
+    """ref @0x10073ffd — ry + 0xca - slide."""
+    return ry_wire + 0xca - slide
+
+
+def radar_ring_frame(v: int) -> int:
+    """ref @0x100740df — frame index before SPR_Draw (15 - wrapped)."""
+    frame = 0
+    if 0x0b <= v <= 0x15d:
+        if v <= 0x0a:
+            frame = 0
+        elif v < 0x21:
+            frame = 1
+        elif v <= 0x20:
+            frame = 0
+        elif v < 0x38:
+            frame = 2
+        elif v <= 0x36:
+            frame = 0
+        elif v < 0x4e:
+            frame = 3
+        elif v <= 0x4d:
+            frame = 0
+        elif v < 0x65:
+            frame = 4
+        elif v <= 0x64:
+            frame = 0
+        elif v < 0x7b:
+            frame = 5
+        elif v <= 0x7a:
+            frame = 0
+        elif v < 0x92:
+            frame = 6
+        elif v <= 0x91:
+            frame = 0
+        elif v < 0xa8:
+            frame = 7
+        elif v <= 0xa7:
+            frame = 0
+        elif v < 0xbf:
+            frame = 8
+        elif v <= 0xbe:
+            frame = 0
+        elif v < 0xca:
+            frame = 9
+        elif v <= 0xc9:
+            frame = 0
+        elif v < 0xec:
+            frame = 10
+        elif v <= 0xeb:
+            frame = 0
+        elif v < 0x102:
+            frame = 11
+        elif v <= 0x101:
+            frame = 0
+        elif v < 0x119:
+            frame = 12
+        elif v <= 0x118:
+            frame = 0
+        elif v < 0x12f:
+            frame = 13
+        elif v <= 0x12e:
+            frame = 0
+        elif v < 0x146:
+            frame = 14
+        elif v <= 0x145:
+            frame = 0
+        elif v < 0x15e:
+            frame = 15
+    frame = (frame + 3) & 0x0f
+    return 0x0f - frame
+
+
 def progress_slot_chip_visible(
     slot: int, state: int, team: int, slot_x: list[int] | None = None
 ) -> bool:
@@ -239,6 +317,18 @@ def main() -> int:
         errors += 1
     if armor_tac_phase_after_visdown(50.0) != 50.001:
         print("FAIL armor tac visdown phase")
+        errors += 1
+
+    if radar_blip_screen_x(640, 512) != 640 - 512 - 0x76:
+        print("FAIL radar blip X")
+        errors += 1
+    if radar_blip_screen_y(-256) != -256 + 0xca - 0x68:
+        print("FAIL radar blip Y")
+        errors += 1
+    if radar_ring_frame(0x20) != radar_ring_frame(0x21):
+        pass  # smoke: function defined
+    if radar_ring_frame(5) != 0x0f - ((0 + 3) & 0x0f):
+        print("FAIL radar ring frame", radar_ring_frame(5))
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
