@@ -45,6 +45,23 @@ def ticket_dock_number_y(screen_h: int) -> int:
     return screen_h - 0x25
 
 
+def ticket_peel_baseline(gtickets: int, armor_param: int) -> int:
+    """ref @0x10075f37 — +0x168c latch from G tickets when zero."""
+    return armor_param if armor_param else gtickets
+
+
+def ticket_peel_bar_tint(gtickets: int, baseline: int) -> int:
+    """ref peel ammoline SPR_Set — (G*100/baseline)+100."""
+    if baseline <= 0:
+        return 0
+    return (gtickets * 100) // baseline + 100
+
+
+def twopoints_t_display(ttickets: int) -> int:
+    """ref @0x10075f5b — right score uses T mod 0x3c."""
+    return ttickets % 0x3c
+
+
 def announce_scroller_origin(screen_w: int, screen_h: int) -> tuple[int, int]:
     """ref @0x10074479 — 5-line announce box anchor."""
     line_h, gap, n = 0xc, 3, 5
@@ -388,6 +405,15 @@ def main() -> int:
         errors += 1
     if ticket_dock_number_y(600) != 600 - 0x25:
         print("FAIL ticket dock number Y")
+        errors += 1
+    if ticket_peel_baseline(42, 0) != 42 or ticket_peel_baseline(42, 99) != 99:
+        print("FAIL ticket peel baseline")
+        errors += 1
+    if ticket_peel_bar_tint(50, 100) != 150 or ticket_peel_bar_tint(50, 0) != 0:
+        print("FAIL ticket peel tint")
+        errors += 1
+    if twopoints_t_display(100) != 40:
+        print("FAIL 2points T mod")
         errors += 1
     if vote_cast_line_y(600, 0) != 250 or vote_cast_line_y(600, 3) != 300:
         print("FAIL vote cast line Y", vote_cast_line_y(600, 0), vote_cast_line_y(600, 3))
