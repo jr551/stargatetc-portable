@@ -132,6 +132,18 @@ def radar_blip_screen_y(ry_wire: int, slide: int = 0x68) -> int:
     return ry_wire + 0xca - slide
 
 
+def entrance_ammo_step(hud_info_mode: int, slide: int, step: int) -> tuple[int, int]:
+    """ref @0x10074f66 — ammoline entrance tick (+0x1554/+0x1558)."""
+    if hud_info_mode == 0:
+        if slide < 0x1d and step < 0x46:
+            step += 1
+        elif slide < 0x1d and step >= 0x46:
+            slide += 1
+    elif hud_info_mode > 0 and slide > 0:
+        slide -= 1
+    return slide, step
+
+
 def ticket_slide_flags_after_peel(rem: int) -> tuple[int, int, int]:
     """ref @0x10074c5c/0x10074c7e — peel sets ebp-0xc0/0xc4 while draining rem."""
     wide = narrow = 0
@@ -348,6 +360,11 @@ def main() -> int:
     w, n, _ = ticket_slide_flags_after_peel(5)
     if w != 1 or n != 1:
         print("FAIL ticket slide peel flags", w, n)
+        errors += 1
+
+    s, t = entrance_ammo_step(0, 0, 0x45)
+    if s != 0 or t != 0x46:
+        print("FAIL entrance ammo step", s, t)
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
