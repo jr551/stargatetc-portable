@@ -35,6 +35,24 @@ def haskey_payload(mode: int, vote: int) -> bytes:
     return bytes([mode & 0xff, vote & 0xff])
 
 
+def ticket_dock_anchor(screen_w: int, screen_h: int) -> tuple[int, int]:
+    """ref CHudSgtc::Draw @0x10074a4c — dock sprite top-left."""
+    return screen_w - 0x4e, screen_h - 0x8e
+
+
+def ticket_dock_number_y(screen_h: int) -> int:
+    """ref @0x10074f0e — HudNumber row when +0x1684 overlay idle."""
+    return screen_h - 0x25
+
+
+def vote_cast_line_y(screen_h: int, line: int) -> int:
+    """ref @0x10076464 — line 0=#SELPREF, 1..5=#MODE0..4."""
+    mid = screen_h // 2
+    if line == 0:
+        return mid - 0x32
+    return mid + (-0x1e, -0xf, 0, 0xf, 0x1e)[line - 1]
+
+
 def vote_plzvote_visible(vote_count: int, vote_sel: int, portrait_team: int) -> bool:
     """ref Draw @0x10076292 — #PLZVOTE when team filter on and vote idle."""
     if not portrait_team:
@@ -147,6 +165,16 @@ def main() -> int:
 
     if envfull_payload_size() != 47:
         print("FAIL EnvFull wire size", envfull_payload_size())
+        errors += 1
+
+    if ticket_dock_anchor(640, 480) != (640 - 0x4e, 480 - 0x8e):
+        print("FAIL ticket dock anchor")
+        errors += 1
+    if ticket_dock_number_y(600) != 600 - 0x25:
+        print("FAIL ticket dock number Y")
+        errors += 1
+    if vote_cast_line_y(600, 0) != 250 or vote_cast_line_y(600, 3) != 300:
+        print("FAIL vote cast line Y", vote_cast_line_y(600, 0), vote_cast_line_y(600, 3))
         errors += 1
 
     client = ROOT / "hlsdk-portable/build-sgtc/cl_dll/client.so"
