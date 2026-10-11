@@ -112,6 +112,16 @@ def simulate_progress_team_ui_step(
     return team, state, cursor
 
 
+def progress_slot_chip_visible(
+    slot: int, state: int, team: int, slot_x: list[int] | None = None
+) -> bool:
+    """ref FUN_1002a9ca tail @0x1002acc2 — mirrored by SGTC_ProgressSlotChipVisible."""
+    slot_x = slot_x or [0x10] * 14 + [0x12] * 14
+    if state == 2 or slot_x[slot] == 0:
+        return False
+    return team == 1
+
+
 def simulate_progress_team_ui_frame(
     teams: list[int], states: list[int], slot_x: list[int] | None = None
 ) -> tuple[list[int], list[int], int]:
@@ -199,6 +209,19 @@ def main() -> int:
     _, st_after, cur_f = simulate_progress_team_ui_frame(teams_f, states_f)
     if st_after[0] != 2 or st_after[2] != 1 or cur_f != 0x10:
         print("FAIL progress team ui frame", st_after[0], st_after[2], cur_f)
+        errors += 1
+
+    if not progress_slot_chip_visible(3, 0, 1):
+        print("FAIL progress chip visible captured st=0")
+        errors += 1
+    if progress_slot_chip_visible(3, 2, 1):
+        print("FAIL progress chip hidden when st=2")
+        errors += 1
+    if progress_slot_chip_visible(3, 0, 1, slot_x=[0] * 28):
+        print("FAIL progress chip hidden when step=0")
+        errors += 1
+    if progress_slot_chip_visible(3, 1, 2):
+        print("FAIL progress chip hidden when team=2")
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
