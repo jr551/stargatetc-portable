@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Optional interactive Xash3D client smoke (loads client.so + SGTC HUD).
-# Requires 32-bit xash3d and a display (or xvfb-run).
+# Optional Xash3D client smoke (loads client.so + SGTC HUD).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MOD="$ROOT/stargatetc"
@@ -8,7 +7,35 @@ BUILD="$ROOT/hlsdk-portable/build-sgtc"
 LOG="$ROOT/tests/.build/playtest_client.log"
 mkdir -p "$ROOT/tests/.build"
 
-SMOKE_SEC="${SGTC_CLIENT_SMOKE_SEC:-18}"
+if [[ "${SGTC_SKIP_CLIENT_SMOKE:-0}" == "1" ]]; then
+  echo "SKIP playtest_client (SGTC_SKIP_CLIENT_SMOKE=1)"
+  exit 0
+fi
+
+# Hard wall clock for the whole script (xvfb + hung GL can ignore inner timeout).
+WALL_SEC="${SGTC_CLIENT_SMOKE_WALL:-28}"
+if [[ -z "${SGTC_CLIENT_SMOKE_INNER:-}" ]]; then
+  export SGTC_CLIENT_SMOKE_INNER=1
+  TIMEOUT_BIN="${SGTC_TIMEOUT_BIN:-/usr/bin/timeout}"
+  if [[ ! -x "$TIMEOUT_BIN" ]]; then
+    TIMEOUT_BIN="$(command -v timeout || true)"
+  fi
+  if [[ -n "$TIMEOUT_BIN" && -x "$TIMEOUT_BIN" ]]; then
+    exec "$TIMEOUT_BIN" -k 3 "${WALL_SEC}s" env SGTC_CLIENT_SMOKE_INNER=1 "$0"
+  fi
+fi
+
+SMOKE_SEC="${SGTC_CLIENT_SMOKE_SEC:-10}"
+TIMEOUT_BIN="${SGTC_TIMEOUT_BIN:-/usr/bin/timeout}"
+if [[ ! -x "$TIMEOUT_BIN" ]]; then
+  TIMEOUT_BIN="$(command -v timeout || true)"
+fi
+
+cleanup_smoke() {
+  pkill -f 'game_launch/xash3d.*stargatetc' 2>/dev/null || true
+  pkill -f 'Xvfb :[0-9]+.*640x480' 2>/dev/null || true
+}
+trap cleanup_smoke EXIT
 
 XASH=""
 for cand in \
@@ -48,30 +75,52 @@ VGUI_LIB="$BUILD/freevgui"
 [[ -f "$VGUI_LIB/vgui.so" ]] || VGUI_LIB=""
 export LD_LIBRARY_PATH="${VGUI_LIB:+$VGUI_LIB:}${XASH_LIBS:+$XASH_LIBS:}$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
 
-RUN=()
+XVFB=()
 if [[ -z "${DISPLAY:-}" ]]; then
   if command -v xvfb-run >/dev/null; then
-    RUN=(xvfb-run -a)
+    XVFB=(xvfb-run -a -e /dev/stderr --server-args="-screen 0 640x480x24 -nolisten tcp")
   else
     echo "SKIP playtest_client: no DISPLAY and no xvfb-run"
     exit 0
   fi
 fi
 
-echo "== xash client smoke (${SMOKE_SEC}s cap, ctp_amon) =="
+echo "== xash client smoke (${SMOKE_SEC}s xash, ${WALL_SEC}s wall, ctp_amon) =="
 : >"$LOG"
 
-# Do not pipe through tee|tail — a crashed/hung xash can leave readers blocked forever.
+XASH_ARGS=(
+  -dev 2 -ref "$REF" -game stargatetc
+  -window -width 640 -height 480
+  +maxplayers 4 +map ctp_amon +sv_lan 1 +name playtest_bot
+)
+
 set +e
-timeout --foreground --kill-after=5 "${SMOKE_SEC}s" \
-  "${RUN[@]}" "$XASH" -dev 2 -ref "$REF" -game stargatetc \
-  -window -width 640 -height 480 \
-  +maxplayers 4 +map ctp_amon +sv_lan 1 +name playtest_bot \
-  >"$LOG" 2>&1
+if [[ -n "$TIMEOUT_BIN" && -x "$TIMEOUT_BIN" ]]; then
+  if [[ ${#XVFB[@]} -gt 0 ]]; then
+    "${XVFB[@]}" "$TIMEOUT_BIN" -k 2 "${SMOKE_SEC}s" "$XASH" "${XASH_ARGS[@]}" >"$LOG" 2>&1
+  else
+    "$TIMEOUT_BIN" -k 2 "${SMOKE_SEC}s" "$XASH" "${XASH_ARGS[@]}" >"$LOG" 2>&1
+  fi
+else
+  if [[ ${#XVFB[@]} -gt 0 ]]; then
+    "${XVFB[@]}" "$XASH" "${XASH_ARGS[@]}" >"$LOG" 2>&1 &
+  else
+    "$XASH" "${XASH_ARGS[@]}" >"$LOG" 2>&1 &
+  fi
+  xp=$!
+  for _ in $(seq 1 "$SMOKE_SEC"); do
+    kill -0 "$xp" 2>/dev/null || break
+    sleep 1
+  done
+  kill -TERM "$xp" 2>/dev/null
+  sleep 1
+  kill -KILL "$xp" 2>/dev/null
+  wait "$xp" 2>/dev/null
+fi
 rc=$?
 set -e
 
-tail -25 "$LOG" || true
+tail -25 "$LOG" 2>/dev/null || true
 
 if grep -Eqi 'Crash: signal|VGui_LoadProgs' "$LOG"; then
   echo "WARN: client smoke hit VGUI/crash (known gap: Xash VGUI support API vs ref client.dll)"
