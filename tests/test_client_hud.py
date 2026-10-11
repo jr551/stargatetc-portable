@@ -103,13 +103,38 @@ def simulate_progress_team_ui_step(
         if state < 2:
             state = 2
     elif team == 1:
-        if state >= 2:
+        if state == 2:
             state = 0
     elif team == 2:
         cursor += progress_slot_step(slot, slot_x, team_row)
         state = 1
         team = 1
     return team, state, cursor
+
+
+def simulate_progress_team_ui_frame(
+    teams: list[int], states: list[int], slot_x: list[int] | None = None
+) -> tuple[list[int], list[int], int]:
+    """One FUN_1002a9ca frame: cursor reset, st==1 clear, then team transitions."""
+    slot_x = slot_x or [0x10] * 14 + [0x12] * 14
+    teams = list(teams)
+    states = list(states)
+    cursor = 0
+    for i in range(28):
+        if states[i] == 1:
+            states[i] = 0
+        t = teams[i]
+        if t == 0:
+            if states[i] < 2:
+                states[i] = 2
+        elif t == 1:
+            if states[i] == 2:
+                states[i] = 0
+        elif t == 2:
+            cursor += progress_slot_step(i, slot_x, teams)
+            states[i] = 1
+            teams[i] = 1
+    return teams, states, cursor
 
 
 def simulate_progress(buf: bytes) -> dict:
@@ -166,6 +191,14 @@ def main() -> int:
     t2, st2, cur2 = simulate_progress_team_ui_step(2, 0, slot=14, team_row=team_row)
     if (t2, st2, cur2) != (1, 1, 2):
         print("FAIL progress team ui bottom step", (t2, st2, cur2))
+        errors += 1
+
+    teams_f = [0] * 28
+    states_f = [1, 0] + [0] * 26
+    teams_f[2] = 2
+    _, st_after, cur_f = simulate_progress_team_ui_frame(teams_f, states_f)
+    if st_after[0] != 2 or st_after[2] != 1 or cur_f != 0x10:
+        print("FAIL progress team ui frame", st_after[0], st_after[2], cur_f)
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
