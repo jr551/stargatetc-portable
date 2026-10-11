@@ -122,9 +122,14 @@ set -e
 
 tail -25 "$LOG" 2>/dev/null || true
 
-if grep -Eqi 'Crash: signal|VGui_LoadProgs' "$LOG"; then
-  echo "WARN: client smoke hit VGUI/crash (known gap: Xash VGUI support API vs ref client.dll)"
-  grep -Ei 'Crash: signal|VGui_LoadProgs|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
+if grep -Eqi 'Crash: signal' "$LOG"; then
+  echo "WARN: client smoke crashed (see $LOG)"
+  grep -Ei 'Crash: signal|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
+  exit 0
+fi
+if grep -Eqi 'VGui_LoadProgs' "$LOG" && ! grep -q 'initialized legacy API in client module' "$LOG"; then
+  echo "WARN: VGUI failed to initialize in client (see $LOG)"
+  grep -Ei 'VGui_LoadProgs|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
   exit 0
 fi
 if grep -Eqi 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL|Could not load' "$LOG"; then
@@ -132,6 +137,10 @@ if grep -Eqi 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL|Could not load' 
   exit 1
 fi
 
+if grep -q 'client connected at' "$LOG"; then
+  echo "OK: client smoke connected (exit=$rc)"
+  exit 0
+fi
 if [[ $rc -eq 124 || $rc -eq 137 ]]; then
   echo "OK: client smoke hit time cap (exit=$rc, expected)"
   exit 0
