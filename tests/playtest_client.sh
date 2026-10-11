@@ -8,6 +8,8 @@ BUILD="$ROOT/hlsdk-portable/build-sgtc"
 LOG="$ROOT/tests/.build/playtest_client.log"
 mkdir -p "$ROOT/tests/.build"
 
+SMOKE_SEC="${SGTC_CLIENT_SMOKE_SEC:-18}"
+
 XASH=""
 for cand in \
   "$ROOT/xash3d-fwgs/build/game_launch/xash3d" \
@@ -37,7 +39,7 @@ export XASH3D_BASEDIR="$ROOT"
 export XASH3D_GAME="stargatetc"
 XASH_ROOT="$(cd "$(dirname "$XASH")/.." && pwd)"
 XASH_LIBS=""
-for d in engine filesystem cl_dll dlls ref/gl ref/soft; do
+for d in engine filesystem cl_dll dlls ref/gl ref/soft menu; do
   [[ -d "$XASH_ROOT/$d" ]] && XASH_LIBS="${XASH_LIBS:+$XASH_LIBS:}$XASH_ROOT/$d"
 done
 REF=soft
@@ -56,27 +58,33 @@ if [[ -z "${DISPLAY:-}" ]]; then
   fi
 fi
 
-echo "== xash client smoke (15s, ctp_amon) =="
+echo "== xash client smoke (${SMOKE_SEC}s cap, ctp_amon) =="
+: >"$LOG"
+
+# Do not pipe through tee|tail — a crashed/hung xash can leave readers blocked forever.
 set +e
-"${RUN[@]}" timeout 15s "$XASH" -dev 2 -ref "$REF" -game stargatetc \
+timeout --foreground --kill-after=5 "${SMOKE_SEC}s" \
+  "${RUN[@]}" "$XASH" -dev 2 -ref "$REF" -game stargatetc \
   -window -width 640 -height 480 \
   +maxplayers 4 +map ctp_amon +sv_lan 1 +name playtest_bot \
-  2>&1 | tee "$LOG" | tail -25
-rc=${PIPESTATUS[0]}
+  >"$LOG" 2>&1
+rc=$?
 set -e
 
-if rg -i 'Crash: signal|VGui_LoadProgs' "$LOG" >/dev/null; then
+tail -25 "$LOG" || true
+
+if grep -Eqi 'Crash: signal|VGui_LoadProgs' "$LOG"; then
   echo "WARN: client smoke hit VGUI/crash (known gap: Xash VGUI support API vs ref client.dll)"
-  rg -i 'Crash: signal|VGui_LoadProgs|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
+  grep -Ei 'Crash: signal|VGui_LoadProgs|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
   exit 0
 fi
-if rg -i 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL|Could not load' "$LOG" >/dev/null; then
+if grep -Eqi 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL|Could not load' "$LOG"; then
   echo "FAIL: client smoke log has wire/protocol errors (see $LOG)"
   exit 1
 fi
 
-if [[ $rc -eq 124 ]]; then
-  echo "OK: client smoke timed out cleanly (expected)"
+if [[ $rc -eq 124 || $rc -eq 137 ]]; then
+  echo "OK: client smoke hit time cap (exit=$rc, expected)"
   exit 0
 fi
 echo "client smoke exit=$rc log=$LOG"
