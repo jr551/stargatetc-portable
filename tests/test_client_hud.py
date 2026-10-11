@@ -50,6 +50,22 @@ def envfull_payload_size() -> int:
 
 
 # Expected field effects (mirrors CHudSgtc handlers).
+def simulate_progress_team_ui_step(team: int, state: int) -> tuple[int, int, int]:
+    """One ref @0x1002abe2 transition (client-local mirror)."""
+    cursor = 0
+    if team == 0:
+        if state < 2:
+            state = 2
+    elif team == 1:
+        if state >= 2:
+            state = 0
+    elif team == 2:
+        cursor += 0x10
+        state = 1
+        team = 1
+    return team, state, cursor
+
+
 def simulate_progress(buf: bytes) -> dict:
     if len(buf) < 31:
         raise ValueError("Progress needs 31 bytes")
@@ -93,6 +109,11 @@ def main() -> int:
     p0 = simulate_progress(progress_payload(0, 0, [0] * 28, 0))
     if p0["m_iBlipProgress"] != 0:
         print("FAIL Progress cmd 0", p0)
+        errors += 1
+
+    t, st, cur = simulate_progress_team_ui_step(2, 0)
+    if (t, st, cur) != (1, 1, 0x10):
+        print("FAIL progress team ui step", (t, st, cur))
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
