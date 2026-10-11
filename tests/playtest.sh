@@ -6,6 +6,24 @@ MOD="$ROOT/stargatetc"
 PORTABLE="$ROOT/hlsdk-portable"
 BUILD="$PORTABLE/build-sgtc"
 
+ensure_mod_tree() {
+  if [[ -f "$MOD/liblist.gam" || -f "$MOD/Liblist.gam" ]] && [[ -f "$MOD/maps/ctp_amon.bsp" ]]; then
+    [[ -f "$MOD/liblist.gam" ]] || ln -sf Liblist.gam "$MOD/liblist.gam"
+    return 0
+  fi
+  echo "== fetch mod assets (jr551/stargatetc-portable) =="
+  local zip="/tmp/sgtc-mod.zip"
+  curl -fsSL -o "$zip" "https://github.com/jr551/stargatetc-portable/archive/refs/heads/main.zip"
+  rm -rf "$ROOT/stargatetc-portable-main"
+  unzip -q "$zip" 'stargatetc-portable-main/stargatetc/*' -d "$ROOT"
+  rm -rf "$MOD"
+  mv "$ROOT/stargatetc-portable-main/stargatetc" "$MOD"
+  rm -rf "$ROOT/stargatetc-portable-main"
+  [[ -f "$MOD/liblist.gam" ]] || ln -sf Liblist.gam "$MOD/liblist.gam"
+}
+
+ensure_mod_tree
+
 echo "== export parity =="
 python3 "$ROOT/tests/test_exports.py"
 
@@ -57,6 +75,6 @@ for d in engine filesystem cl_dll dlls; do
   [[ -d "$XASH_ROOT/$d" ]] && XASH_LIBS="${XASH_LIBS:+$XASH_LIBS:}$XASH_ROOT/$d"
 done
 export LD_LIBRARY_PATH="${XASH_LIBS:+$XASH_LIBS:}$(dirname "$XASH"):${LD_LIBRARY_PATH:-}"
-timeout 12s "$XASH" -dev 2 -ref soft -game "$MOD" -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
+timeout 12s "$XASH" -dev 2 -ref soft -game stargatetc -dedicated +maxplayers 4 +map ctp_amon +sv_lan 1 \
   2>&1 | tee "$ROOT/tests/.build/playtest_dedicated.log" | tail -20
 echo "playtest log: tests/.build/playtest_dedicated.log"
