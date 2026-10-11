@@ -35,6 +35,11 @@ def haskey_payload(mode: int, vote: int) -> bytes:
     return bytes([mode & 0xff, vote & 0xff])
 
 
+def envfull_payload_size() -> int:
+    """19 WRITE_COORD + 7 BYTE + 1 SHORT = 47 (ref CEnvParticule::SendValue @0x15ec68)."""
+    return 19 * 2 + 7 + 2
+
+
 # Expected field effects (mirrors CHudSgtc handlers).
 def simulate_progress(buf: bytes) -> dict:
     if len(buf) < 31:
@@ -84,6 +89,10 @@ def main() -> int:
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
     if b.get("m_iRadarFocusX") != int(64.0 * 8):
         print("FAIL Blip focus", b)
+        errors += 1
+
+    if envfull_payload_size() != 47:
+        print("FAIL EnvFull wire size", envfull_payload_size())
         errors += 1
 
     client = ROOT / "hlsdk-portable/build-sgtc/cl_dll/client.so"
