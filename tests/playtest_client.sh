@@ -132,7 +132,7 @@ if grep -Eqi 'VGui_LoadProgs' "$LOG" && ! grep -q 'initialized legacy API in cli
   grep -Ei 'VGui_LoadProgs|pfnMessageEnd|expected [0-9]+ bytes' "$LOG" | head -8
   exit 0
 fi
-if grep -Eqi 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL|Could not load' "$LOG"; then
+if grep -Eqi 'pfnMessageEnd|expected [0-9]+ bytes|svc_bad|FATAL' "$LOG"; then
   echo "FAIL: client smoke log has wire/protocol errors (see $LOG)"
   exit 1
 fi

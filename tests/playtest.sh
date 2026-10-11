@@ -80,7 +80,7 @@ timeout 12s "$XASH" -dev 2 -ref soft -game stargatetc -dedicated +maxplayers 4 +
 echo "playtest log: tests/.build/playtest_dedicated.log"
 
 if [[ -x "$ROOT/tests/playtest_client.sh" && "${SGTC_SKIP_CLIENT_SMOKE:-0}" != "1" ]]; then
-  echo "== optional client smoke (non-gating until VGUI API parity) =="
+  echo "== xash client smoke (gating) =="
   PT_TIMEOUT="${SGTC_TIMEOUT_BIN:-/usr/bin/timeout}"
   if [[ -x "$PT_TIMEOUT" ]]; then
     "$PT_TIMEOUT" -k 3 35s "$ROOT/tests/playtest_client.sh" \
