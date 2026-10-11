@@ -12,6 +12,9 @@ python3 "$ROOT/tests/test_exports.py"
 echo "== logic parity (52 matrix) =="
 python3 "$ROOT/tests/test_logic.py"
 
+echo "== client HUD wire spec =="
+python3 "$ROOT/tests/test_client_hud.py"
+
 echo "== deploy linux game libs =="
 install -D -m 0644 "$BUILD/dlls/hl.so" "$MOD/dlls/hl.so"
 install -D -m 0644 "$BUILD/cl_dll/client.so" "$MOD/cl_dlls/client.so"
