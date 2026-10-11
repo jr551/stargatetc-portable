@@ -132,6 +132,20 @@ def radar_blip_screen_y(ry_wire: int, slide: int = 0x68) -> int:
     return ry_wire + 0xca - slide
 
 
+def ticket_slide_flags_after_peel(rem: int) -> tuple[int, int, int]:
+    """ref @0x10074c5c/0x10074c7e — peel sets ebp-0xc0/0xc4 while draining rem."""
+    wide = narrow = 0
+    if rem >= 0x3:
+        narrow = 1
+        rem -= 3
+    if rem >= 0x2:
+        wide = 1
+        rem -= 2
+    elif rem > 0:
+        rem = 0
+    return wide, narrow, rem
+
+
 def radar_ring_frame(v: int) -> int:
     """ref @0x100740df — frame index before SPR_Draw (15 - wrapped)."""
     frame = 0
@@ -329,6 +343,11 @@ def main() -> int:
         pass  # smoke: function defined
     if radar_ring_frame(5) != 0x0f - ((0 + 3) & 0x0f):
         print("FAIL radar ring frame", radar_ring_frame(5))
+        errors += 1
+
+    w, n, _ = ticket_slide_flags_after_peel(5)
+    if w != 1 or n != 1:
+        print("FAIL ticket slide peel flags", w, n)
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
