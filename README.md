@@ -1,7 +1,22 @@
-# stargatetc-portable
+# stargatetc-rea
 
-I only packed this and made the bots work, everything else is made by other people.
+StargateTC mod assets plus a Linux source port (`hlsdk-portable/`) rebuilt from
+`ref/stc_i386.so` / `ref/sgtc2_dll/client.dll` with REA-assisted parity work.
 
-No install or external dependencies are required. Run stargatetc.bat to open and create a multiplayer game, bots will join you have fun :)
+## Build (Linux i386 game DLLs)
 
-Full download link here https://github.com/jr551/stargatetc-portable/archive/refs/heads/main.zip
+```bash
+cmake -S hlsdk-portable -B hlsdk-portable/build-sgtc -DGAMEDIR=$PWD/stargatetc
+make -C hlsdk-portable/build-sgtc -j$(nproc)
+```
+
+## Verify exports + server logic
+
+```bash
+python3 tests/test_exports.py      # 92/92 SGTC factories, engine exports PASS
+python3 tests/test_logic.py        # 52/52 behavioral matrix vs ref stc_i386.so
+./tests/playtest.sh                # deploy hl.so + client.so; Xash smoke if 32-bit engine present
+```
+
+Upstream mod pack: https://github.com/jr551/stargatetc-portable/archive/refs/heads/main.zip
+Source port repo: https://github.com/jr551/sgtc1-hlsdk-portable
