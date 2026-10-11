@@ -112,6 +112,16 @@ def simulate_progress_team_ui_step(
     return team, state, cursor
 
 
+def armor_tac_phase_after_visup(fl_time: float) -> float:
+    """ref @0x100739bd — realtime + 10.0 (rodata @0x10095a50)."""
+    return fl_time + 10.0
+
+
+def armor_tac_phase_after_visdown(fl_time: float) -> float:
+    """ref @0x10073aa7 — realtime + 0.001 (rodata @0x10094178)."""
+    return fl_time + 0.001
+
+
 def progress_slot_chip_visible(
     slot: int, state: int, team: int, slot_x: list[int] | None = None
 ) -> bool:
@@ -222,6 +232,13 @@ def main() -> int:
         errors += 1
     if progress_slot_chip_visible(3, 1, 2):
         print("FAIL progress chip hidden when team=2")
+        errors += 1
+
+    if armor_tac_phase_after_visup(100.0) != 110.0:
+        print("FAIL armor tac visup phase")
+        errors += 1
+    if armor_tac_phase_after_visdown(50.0) != 50.001:
+        print("FAIL armor tac visdown phase")
         errors += 1
 
     b = simulate_blip(blip_payload(0x32, 64.0, -32.0))
