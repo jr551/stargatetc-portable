@@ -3,6 +3,20 @@
 StargateTC mod assets plus a Linux source port (`hlsdk-portable/`) rebuilt from
 `ref/stc_i386.so` / `ref/sgtc2_dll/client.dll` with REA-assisted parity work.
 
+## Status: port complete — all parity gates pass
+
+Tag `sgtc-port-1.0` on all three repos; published GitHub Releases.
+
+| Gate | hlsdk-portable | hlsdk-xash3d (mirror, `SGTC_TREE=hlsdk-xash3d`) |
+|---|---|---|
+| `tests/test_exports.py` | PASS — 96/96 `sgtc_*` factories, engine exports, dlopen `RTLD_NOW` | PASS — identical |
+| `tests/test_client_hud.py` | `errors=0` (vs `ref/sgtc2_dll/client.dll`) | `errors=0` |
+| `tests/test_logic.py` | 52/52 behavioral matrix `same-behavior` (vs `ref/stc_i386.so`) | 52/52 |
+| `tests/playtest.sh` | OK — Xash3D client smoke connects | OK |
+
+Deployed `stargatetc/dlls/hl.so` + `stargatetc/cl_dlls/client.so` are md5-identical to the
+`hlsdk-portable/build-sgtc` outputs. Last full-chain re-verification: 2026-10-12.
+
 ## Build (Linux i386 game DLLs)
 
 ```bash
