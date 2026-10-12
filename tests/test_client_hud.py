@@ -6,6 +6,7 @@ Does not load client.so (no engine); use alongside test_exports + playtest.sh.
 """
 from __future__ import annotations
 
+import os
 import struct
 import sys
 from pathlib import Path
@@ -428,7 +429,7 @@ def main() -> int:
         print("FAIL concuss wire", (c0, c1))
         errors += 1
 
-    client = ROOT / "hlsdk-portable/build-sgtc/cl_dll/client.so"
+    client = ROOT / os.environ.get("SGTC_TREE", "hlsdk-portable") / "build-sgtc/cl_dll/client.so"
     if not client.is_file():
         print("WARN missing", client, "(build hlsdk-portable first)")
 

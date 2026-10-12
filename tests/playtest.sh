@@ -3,7 +3,8 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MOD="$ROOT/stargatetc"
-PORTABLE="$ROOT/hlsdk-portable"
+TREE="${SGTC_TREE:-hlsdk-portable}"
+PORTABLE="$ROOT/$TREE"
 BUILD="$PORTABLE/build-sgtc"
 
 ensure_mod_tree() {

@@ -46,7 +46,7 @@ ROOT = os.path.dirname(HERE)
 BUILD_SCRATCH = os.path.join(HERE, ".build")
 
 REF_SO = os.path.join(ROOT, "ref", "stc_i386.so")
-REBUILD_SO = os.path.join(ROOT, "hlsdk-portable", "build-sgtc", "dlls", "hl.so")
+REBUILD_SO = os.path.join(ROOT, os.environ.get("SGTC_TREE", "hlsdk-portable"), "build-sgtc", "dlls", "hl.so")
 
 # Prefixes the port is expected to cover.  Trailing underscore is intentional:
 # it keeps e.g. `game_` from swallowing unrelated identifiers.

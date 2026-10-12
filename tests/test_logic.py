@@ -21,6 +21,7 @@ Rebuild hl.so for logic tests with exported class methods (stub dlsym):
   cmake -S hlsdk-portable -B hlsdk-portable/build-dbg \\
     -DGAMEDIR=$PWD/stargatetc -DSGTC_EXPORT_ALL_SYMBOLS=ON -DCMAKE_BUILD_TYPE=Debug
 """
+import os
 import re
 import subprocess
 import sys
@@ -29,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 STUB = ROOT / "tests" / ".build" / "stub_engine"
 REF = ROOT / "ref" / "stc_i386.so"
-BUILT = ROOT / "hlsdk-portable" / "build-dbg" / "dlls" / "hl.so"
+BUILT = ROOT / os.environ.get("SGTC_TREE", "hlsdk-portable") / "build-dbg" / "dlls" / "hl.so"
 
 # ref weapon iIds decoded from GetItemInfo disasm + verified live below.
 # (link_classname, expected_iId(None=use ref), GetItemInfo mangled symbol)
