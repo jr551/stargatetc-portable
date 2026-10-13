@@ -1,0 +1,13 @@
+# build outputs (reproducible via README commands)
+hlsdk-portable/build-*/
+hlsdk-xash3d/build-*/
+tests/.build/
+tests/__pycache__/
+# playtest/runtime churn
+stargatetc/logs/
+stargatetc/vfs.cfg
+*.bak
+stargatetc/.xash_id
+# deployed build outputs (copy of build-*)
+stargatetc/dlls/hl.so
+stargatetc/cl_dlls/client.so
