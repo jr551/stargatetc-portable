@@ -27,8 +27,8 @@ Usage:
 
 Exit status: 0 if the harness itself ran and the engine-export contract holds,
 1 if a required engine export is missing (hard failure), 2 if a binary is
-unreadable.  Gaps in the ported entity surface are reported but do NOT fail the
-run - the baseline rebuild is known to predate the sgtc_* sources.
+run - informational only (entity/factory/gmsg surface deltas reflect base-SDK
+lineage differences, not missing port work; engine entry points are the contract).
 """
 
 from __future__ import annotations
