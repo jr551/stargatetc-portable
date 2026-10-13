@@ -4,6 +4,7 @@ hlsdk-xash3d/build-*/
 tests/.build/
 tests/__pycache__/
 # playtest/runtime churn
+stargatetc/logs/
 stargatetc/vfs.cfg
 stargatetc/liblist.gam
 *.bak
