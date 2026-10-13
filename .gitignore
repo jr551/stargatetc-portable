@@ -5,7 +5,7 @@ tests/.build/
 tests/__pycache__/
 # playtest/runtime churn
 stargatetc/logs/
-stargatetc/vfs.cfg
+stargatetc/liblist.gam
 *.bak
 stargatetc/.xash_id
 # deployed build outputs (copy of build-*)
