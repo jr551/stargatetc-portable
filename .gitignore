@@ -12,3 +12,13 @@ stargatetc/.xash_id
 # deployed build outputs (copy of build-*)
 stargatetc/dlls/hl.so
 stargatetc/cl_dlls/client.so
+# REA/reference work products (local analysis only)
+.omp/
+.rea/
+rea_dump/
+ref/
+reference/
+valve-plain-sdk/
+*.so
+inventory_client_dll.json
+work_strings.txt
