@@ -1,0 +1,8 @@
+[submodule "hlsdk-portable"]
+	path = hlsdk-portable
+	url = https://github.com/jr551/sgtc1-hlsdk-portable
+	branch = master
+[submodule "hlsdk-xash3d"]
+	path = hlsdk-xash3d
+	url = https://github.com/jr551/sgtc1-hlsdk-xash3d
+	branch = sgtc-port

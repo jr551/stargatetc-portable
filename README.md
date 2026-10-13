@@ -7,6 +7,11 @@ StargateTC mod assets plus a Linux source port (`hlsdk-portable/`) rebuilt from
 
 Tag `sgtc-port-1.0` on all three repos; published GitHub Releases.
 
+```bash
+git clone --recurse-submodules https://github.com/jr551/stargatetc-portable
+# existing checkout: git submodule update --init --recursive
+```
+
 | Gate | hlsdk-portable | hlsdk-xash3d (mirror, `SGTC_TREE=hlsdk-xash3d`) |
 |---|---|---|
 | `tests/test_exports.py` | PASS — 96/96 `sgtc_*` factories, engine exports, dlopen `RTLD_NOW` | PASS — identical |
@@ -15,7 +20,7 @@ Tag `sgtc-port-1.0` on all three repos; published GitHub Releases.
 | `tests/playtest.sh` | OK — Xash3D client smoke connects | OK |
 
 Deployed `stargatetc/dlls/hl.so` + `stargatetc/cl_dlls/client.so` are md5-identical to the
-`hlsdk-portable/build-sgtc` outputs. Last full-chain re-verification: 2026-10-12.
+`hlsdk-portable/build-sgtc` outputs. Last full-chain re-verification: 2026-10-13.
 
 ## Build (Linux i386 game DLLs)
 
