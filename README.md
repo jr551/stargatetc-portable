@@ -1,7 +1,22 @@
-# stargatetc-rea
+# stargatetc-portable
 
-StargateTC mod assets plus a Linux source port (`hlsdk-portable/`) rebuilt from
-`ref/stc_i386.so` / `ref/sgtc2_dll/client.dll` with REA-assisted parity work.
+**Live** — the runnable StargateTC package. This repo contains the game itself
+(Xash3D engine binaries, the `stargatetc/` mod directory, and bots), not the
+game-logic source code. If you want to play or test the mod, **this is the repo
+to work in**.
+
+StargateTC mod assets plus a Linux source port (`hlsdk-portable/` submodule)
+rebuilt from `ref/stc_i386.so` / `ref/sgtc2_dll/client.dll` with REA-assisted
+parity work.
+
+## Which repo is which
+
+- **jr551/stargatetc-portable** (this repo) — live runnable package: Xash3D +
+  mod files + bots, with the two SDK trees as submodules.
+- **jr551/stargatetc-hlsdk-portable** — canonical GoldSrc/Xash3D game-logic
+  source port (fork of FWGS/hlsdk-portable). Edit game code there.
+- **jr551/stargatetc-hlsdk-xash3d** — Xash3D-oriented mirror of the same SDK
+  port (default branch `sgtc-port`).
 
 ## Status: port complete — all parity gates pass
 
@@ -53,4 +68,4 @@ SGTC_TREE=hlsdk-xash3d ./tests/playtest.sh
 ```
 
 Upstream mod pack: https://github.com/jr551/stargatetc-portable/archive/refs/heads/main.zip
-Source port repo: https://github.com/jr551/sgtc1-hlsdk-portable
+Game-logic source repo: https://github.com/jr551/stargatetc-hlsdk-portable
