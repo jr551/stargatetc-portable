@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+# sgtc-vnc — drive the StargateTC A/B harness over the :78 Xvnc display.
+#
+# One game at a time on :78. Input recipe (verified 2026-10-15):
+#   keys  -> vncdotool (console toggle, typing)
+#   clicks -> xdotool press/release at REAL coords (view 62% capture, x = scaled*1.613)
+#
+# Usage:
+#   sgtc-vnc cap [name]            capture framebuffer -> /tmp/xashrun/<name>.png + _s.png (62%)
+#   sgtc-vnc click <rx> <ry>       real-pixel VGUI click (press/release, no coords offset)
+#   sgtc-vnc sclick <sx> <sy>      click given 62%-capture coords (converts to real)
+#   sgtc-vnc console <cmd>         toggle console, type a command, Enter, close console
+#   sgtc-vnc open                  just open the console (stays open for typing)
+#   sgtc-vnc close                 just close it
+#   sgtc-vnc type <text>           type into the OPEN console (no toggle/enter)
+#   sgtc-vnc key <k>               send one vncdotool key (enter|escape|grave|...)
+#   sgtc-vnc launch port|orig      setsid-launch the matching build
+#   sgtc-vnc kill                  pkill whichever xash3d is on :78
+#   sgtc-vnc join                  menu10 Ok -> classe 1 1 -> kill -> wait -> menu 11
+#   sgtc-vnc status                process + last few log lines + fresh capture
+#
+# Env overrides: DISPLAY (:78), VNC (127.0.0.1::5978), RUNPORT, RUNORIG, LOGPORT, LOGORIG.
+
+set -u
+DISP="${DISPLAY:-:78}"
+VNC="${VNC:-127.0.0.1::5978}"
+VD="${VDOT:-$HOME/.local/bin/vncdotool}"
+XD=xdotool
+OUT=/tmp/xashrun
+mkdir -p "$OUT"
+
+RUNPORT="${RUNPORT:-$HOME/stargatetc-rea/testing/run/runport.sh}"
+RUNORIG="${RUNORIG:-$HOME/stargatetc-rea/testing/run/runorig.sh}"
+LOGPORT="${LOGPORT:-$OUT/pwpn.log}"
+LOGORIG="${LOGORIG:-$OUT/origwpn.log}"
+
+die(){ echo "sgtc-vnc: $*" >&2; exit 2; }
+
+cap(){ # cap [name]
+  local n="${1:-cap}"
+  "$VD" -s "$VNC" capture "$OUT/$n.png" >/dev/null 2>&1 \
+    || die "capture failed (is :78/Xvnc up?)"
+  convert "$OUT/$n.png" -resize 62% "$OUT/${n}_s.png" 2>/dev/null || cp "$OUT/$n.png" "$OUT/${n}_s.png"
+  echo "$OUT/${n}_s.png"
+}
+
+xclick(){ # real-pixel click
+  DISPLAY="$DISP" $XD mousemove "$1" "$2" mousedown 1 sleep 0.6 mouseup 1
+}
+
+console_open(){ "$VD" -s "$VNC" key '`' >/dev/null 2>&1; sleep 0.9; }
+
+cmd_console(){ # one-shot console command
+  console_open
+  "$VD" -s "$VNC" type "$1" >/dev/null 2>&1
+  "$VD" -s "$VNC" key enter >/dev/null 2>&1
+  sleep "${2:-1.0}"
+  "$VD" -s "$VNC" key '`' >/dev/null 2>&1
+  sleep 0.6
+}
+
+launch(){
+  case "$1" in
+    port) setsid "$RUNPORT" </dev/null >/dev/null 2>&1 & ;;
+    orig) setsid "$RUNORIG" </dev/null >/dev/null 2>&1 & ;;
+    *) die "launch port|orig" ;;
+  esac
+  echo "launched $1 (waiting ~40s for map load)"
+}
+
+killgame(){ pkill -f 'game_launch/xash3d.*stargatetc' 2>/dev/null; pkill -f 'xash3d.exe.*stargatetc' 2>/dev/null; echo killed; }
+
+status(){
+  pgrep -af 'xash3d' || echo "no xash3d process"
+  echo "--- port log tail ---"; tail -5 "$LOGPORT" 2>/dev/null || echo "(none)"
+  echo "--- orig log tail ---"; tail -5 "$LOGORIG" 2>/dev/null || echo "(none)"
+  cap status >/dev/null && echo "shot -> $OUT/status_s.png"
+}
+
+# Full join path that works on BOTH builds:
+# menu-10 Ok (real 461,706) -> classe 1 1 (pending class+team) -> kill -> dead-tick -> menu 11.
+join(){
+  xclick 461 706; sleep 2                      # menu 10 Ok
+  cmd_console 'classe 1 1' 1.5                  # pending class 1 + team 1 (Torri)
+  cmd_console 'kill' 2.0                        # die -> dead-tick consumes pick -> menu 11
+  sleep 3
+  cap join
+}
+
+case "${1:-}" in
+  cap)      cap "${2:-cap}" ;;
+  click)    xclick "${2:?x}" "${3:?y}" ;;
+  sclick)   xclick "$((${2:?sx}*1613/1000))" "$((${3:?sy}*1613/1000))" ;;
+  console)  cmd_console "${2:?cmd}" "${3:-1.0}" ;;
+  open)     console_open ;;
+  close)    "$VD" -s "$VNC" key '`' >/dev/null 2>&1 ;;
+  type)     "$VD" -s "$VNC" type "${2:?text}" >/dev/null 2>&1 ;;
+  key)      "$VD" -s "$VNC" key "${2:?key}" >/dev/null 2>&1 ;;
+  launch)   launch "${2:?port|orig}" ;;
+  kill)     killgame ;;
+  join)     join ;;
+  status)   status ;;
+  *) die "commands: cap|click|sclick|console|open|close|type|key|launch|kill|join|status" ;;
+esac
